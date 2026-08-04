@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil & Formation | Portfolio Ingénieur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Barre de Navigation Interface -->
+  <nav class="bg-white border-b border-gray-200 dark:bg-[#14181f] dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo / Identité -->
+      <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-600 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <!-- Liens Navigation & Toggle -->
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Accueil</a>
+        <a href="Profil.html" class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1">Profil</a>
+        <a href="Projets.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Expériences & Projets</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <!-- Bouton Mode Sombre / Clair -->
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-200 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Changer de thème">
+          <!-- Icône Soleil (visible en mode sombre) -->
+          <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+          </svg>
+          <!-- Icône Lune (visible en mode clair) -->
+          <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-20 max-w-7xl mx-auto px-6">
+    
+    <!-- En-tête -->
+    <div class="mb-12">
+      <span class="text-xs font-mono text-cyan-600 dark:text-brand-cyan uppercase">// DOSSIER PERSONNEL</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mt-1">// PROFIL & PARCOURS ACADÉMIQUE</h1>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mt-2">Présentation générale, spécialisations en ingénierie aéronautique/spatiale et parcours international.</p>
+    </div>
+
+    <!-- Section Profil / Bio -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+      
+      <div class="lg:col-span-8 bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl p-8 shadow-sm dark:shadow-none">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-brand-accent">#</span> PRÉSENTATION TECHNIQUE
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Diplômé d'un parcours d'ingénieur spécialisé en <strong>Aéronautique et Mécanique</strong>, j'allie de solides compétences en modélisation CAO, calculs de structures et simulation numérique (CFD / Thermique) à une expérience pragmatique du terrain.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Fort de mon expérience en bureau d'études automobile ainsi que d'un fort engagement associatif dans le domaine des sports mécaniques, je maîtrise l'ensemble du cycle de vie d'un projet : du dimensionnement théorique sur logiciel au prototypage et aux essais sur banc ou sur piste.
+        </p>
+      </div>
+
+      <!-- Métriques clés -->
+      <div class="lg:col-span-4 bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl p-8 flex flex-col justify-between font-mono shadow-sm dark:shadow-none">
+        <h3 class="text-sm text-gray-500 dark:text-gray-400 mb-4">// EXPERTISES CLÉS</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex justify-between border-b border-gray-200 dark:border-brand-border pb-2">
+            <span class="text-gray-500 dark:text-gray-400">Structure / CAO</span>
+            <span class="text-cyan-600 dark:text-brand-cyan font-bold">CATIA V5 / SolidWorks</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-200 dark:border-brand-border pb-2">
+            <span class="text-gray-500 dark:text-gray-400">Simulation CFD</span>
+            <span class="text-cyan-600 dark:text-brand-cyan font-bold">Ansys Fluent / Star-CCM+</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-200 dark:border-brand-border pb-2">
+            <span class="text-gray-500 dark:text-gray-400">Pneumatique/Thermique</span>
+            <span class="text-cyan-600 dark:text-brand-cyan font-bold">Festo, Dimensionnement</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-200 dark:border-brand-border pb-2">
+            <span class="text-gray-500 dark:text-gray-400">Programmation</span>
+            <span class="text-cyan-600 dark:text-brand-cyan font-bold">MATLAB / Python</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Section Formation / Timeline -->
+    <section class="border-t border-gray-200 dark:border-brand-border pt-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">// FORMATION & ÉCHANGES INTERNATIONAUX</h2>
+
+      <div class="space-y-8">
+        
+        <!-- Diplôme principal -->
+        <div class="relative pl-8 border-l-2 border-brand-accent">
+          <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-brand-accent"></span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Diplôme d'Ingénieur en Génie Aéronautique & Spatial</h3>
+            <span class="font-mono text-xs text-cyan-600 dark:text-brand-cyan bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border px-3 py-1 rounded w-fit shadow-sm dark:shadow-none">ELISA Aerospace</span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Spécialisation Aéronautique, calcul de structures, mécanique des fluides et propulsion.</p>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="bg-slate-200 dark:bg-brand-bg border border-gray-300 dark:border-brand-border px-2 py-1 rounded text-gray-700 dark:text-gray-300">CFD</span>
+            <span class="bg-slate-200 dark:bg-brand-bg border border-gray-300 dark:border-brand-border px-2 py-1 rounded text-gray-700 dark:text-gray-300">Structures Aéro</span>
+            <span class="bg-slate-200 dark:bg-brand-bg border border-gray-300 dark:border-brand-border px-2 py-1 rounded text-gray-700 dark:text-gray-300">Thermique</span>
+          </div>
+        </div>
+
+        <!-- Échange international -->
+        <div class="relative pl-8 border-l-2 border-cyan-600 dark:border-brand-cyan">
+          <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-cyan-600 dark:bg-brand-cyan"></span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Échange Académique International</h3>
+            <span class="font-mono text-xs text-cyan-600 dark:text-brand-cyan bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border px-3 py-1 rounded w-fit shadow-sm dark:shadow-none">Transport and Telecommunication Institute (Riga)</span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Systèmes d'ingénierie complexes, dynamique des fluides avancée et environnement académique multiculturel.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script du Theme Toggle -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
