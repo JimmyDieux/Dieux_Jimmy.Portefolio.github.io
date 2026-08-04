@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PFE Renault Group | Projet Ingénieur</title>
+  <title>PFE Renault Group | Banc d'Essai Thermique & Pneumatique</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -74,68 +74,168 @@
     <!-- En-tête du projet -->
     <div class="mb-10">
       <div class="flex items-center gap-3 mb-4">
-        <span class="bg-amber-600 text-white text-xs font-mono px-3 py-1 rounded shadow">AUTOMOBILE / R&D</span>
-        <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">FÉVR. 2026 - AOÛT 2026</span>
+        <span class="bg-amber-600 text-white text-xs font-mono px-3 py-1 rounded shadow">BUREAU D'ÉTUDES RENAULT GROUP</span>
+        <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">MAR. 2026 - SEPT. 2026</span>
       </div>
-      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Projet de Fin d'Études (PFE) — Bureau d'Études</h1>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Stage : Mise à jour d'un Banc d'Essai Thermique & Pneumatique</h1>
       <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
-        Stage de fin d'études au sein du bureau d'études Renault Group : modélisation, calculs de structures (élément finis) et optimisation mécanique sur composants véhicules.
+        Mise à jour, développement et optimisation d'un banc d'essai, autour de trois modules clés pour surveiller et tester des pièces à l'aide actionneurs en conditions climatiques sévères.
       </p>
     </div>
 
     <!-- Image Principale -->
-    <div class="relative h-96 rounded-xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-md mb-12">
+    <div class="relative h-[420px] rounded-xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-md mb-6">
       <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Renault BE" class="w-full h-full object-cover">
+      <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
+        <p class="text-white font-mono text-sm">Figure 1 : Vue d'ensemble de l'environnement d'étude du banc d'essai.</p>
+      </div>
     </div>
 
     <!-- Grille Métriques Clés -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
-        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Entreprise</div>
-        <div class="text-xl font-bold text-gray-900 dark:text-white font-mono">Renault Group</div>
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Humidité relative</div>
+        <div class="text-lg font-bold text-red-500 font-mono">95%</div>
       </div>
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
-        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Domaine</div>
-        <div class="text-xl font-bold text-gray-900 dark:text-white font-mono">Bureau d'Études</div>
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Température milieu</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">-35°C à 65°C</div>
       </div>
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
-        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Spécialité</div>
-        <div class="text-xl font-bold text-gray-900 dark:text-white font-mono">CAO & Simulation</div>
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Température cible de l'actionneur</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">15°C à 30°C</div>
       </div>
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
-        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Durée</div>
-        <div class="text-xl font-bold text-emerald-700 dark:text-green-400 font-mono">6 Mois</div>
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Effort Actionneur</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">Jusqu'à 100 N</div>
       </div>
     </div>
 
-    <!-- Section Détails -->
+    <!-- Section Principale : Les 3 Modules -->
     <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
-        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// 01. MISSION & RESPONSABILITÉS</h2>
-        <p class="leading-relaxed mb-4">
-          Intégré aux équipes d'ingénierie du bureau d'études, l'objectif du projet est de développer et valider des sous-ensembles mécaniques soumis à de fortes contraintes structurales et thermiques.
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ARCHITECTURE DU PROJET : LES 3 MODULES CLÉS</h2>
+        <p class="leading-relaxed mb-6">
+          Pour répondre au cahier des charges et s'affranchir des contraintes environnementales du milieu de test, le système de contrôle de l'actionneur est découpé en trois grands modules complémentaires. Chacun répond à un rôle fonctionnel précis dans la chaîne de test et de régulation.
         </p>
+
+        <!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Le Module Thermique</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Rôle : Barrage physique et gestion des flux conducto-convectifs</p>
+          <p class="leading-relaxed mb-4">
+            <strong>Principe :</strong> Il s'agit de la barrière physique externe qui contient l'actionneur. Sa conception géométrique et le choix de ses matériaux visent à encaisser les agressions thermiques extérieures extrêmes (allant de -35°C en conditions froides, jusqu'à +65°C en ambiance chaude).
+          </p>
+          <p class="leading-relaxed">
+            <strong>Utilité :</strong> Sans cette barrière protectrice, l'actionneur subirait directement les chocs thermiques du milieu extérieur, ce qui perturberait immédiatement ses propriétés mécaniques, la viscosité de ses fluides internes et la précision de ses courses. Ce module permet de confiner un micro-climat stable autour du composant.
+          </p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Le Module de Climatisation</h3>
+          <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-3">Rôle : Apport d'un débit d'air extérieur visant à réguler la température du module thermique</p>
+          <p class="leading-relaxed mb-4">
+            <strong>Principe :</strong> Ce sous-système intègre un climatiseur situé à l'exterieur du banc d'essais capable de générer un débit d'air à température constante. Il insuffle l'énergie calorifique ou frigorifique nécessaire pour contrer les pertes ou les gains de chaleur à travers l'enveloppe.
+          </p>
+          <p class="leading-relaxed">
+            <strong>Utilité :</strong> L'enveloppe seule ne suffit pas à bloquer les transferts thermiques. Il est impératif d'injecter un débit d'air dynamique pour forcer la température interne à rester strictement dans la plage cible de sécurité (15°C à 30°C), garantissant ainsi que l'actionneur opère dans des conditions nominales de laboratoire peu importe les conditions climatiques dans le banc d'essais.
+          </p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Le Module Pneumatique & de Régulation</h3>
+          <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-3">Rôle : Pilotage de la vitesse, de la force de l'actionneur</p>
+          <p class="leading-relaxed mb-4">
+            <strong>Principe :</strong> Ce module gère l'alimentation pneumatique et l'asservissement de l'actionneur au coeur du banc d'essais. Il se base sur l'ordinateur qui contrôle l'entiéreté du banc d'essais.
+          </p>
+          <p class="leading-relaxed">
+            <strong>Pourquoi il est là :</strong> Il permet de piloter la réponse dynamique du système testé. C'est grâce à lui que l'on contrôle la vitesse réelle de l'actionneur (calibrée entre 0.01 et 0.1 m/s) et sa capacité à développer un effort mécanique en charge pouvant atteindre 100 N
+          </p>
+        </div>
+
+        <!-- Galerie photos pour illustrer les modules -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-[#232a35]">
+          <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] bg-slate-100 dark:bg-[#0b0d10] p-2">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80" alt="Module Enveloppe" class="w-full h-36 object-cover rounded">
+            <p class="text-xs font-mono text-gray-500 mt-2 text-center">Module 1 : Vue 3D enveloppe isolante</p>
+          </div>
+          <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] bg-slate-100 dark:bg-[#0b0d10] p-2">
+            <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=400&q=80" alt="Module Aéraulique" class="w-full h-36 object-cover rounded">
+            <p class="text-xs font-mono text-gray-500 mt-2 text-center">Module 2 : Schèma de fonctionnement</p>
+          </div>
+          <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] bg-slate-100 dark:bg-[#0b0d10] p-2">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Module Pneumatique" class="w-full h-36 object-cover rounded">
+            <p class="text-xs font-mono text-gray-500 mt-2 text-center">Module 3 : Diagramme Matlab/Simulink de la régulation</p>
+          </div>
+        </div>
+
       </div>
 
+      <!-- NOUVELLE SECTION : Bilan & Apports Stratégiques -->
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
-        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// 02. RÉALISATIONS DÉTAILLÉES</h2>
-        <ul class="list-disc list-inside space-y-3 leading-relaxed">
-          <li><strong>Conception CAO :</strong> Modélisation paramétrique avancée et gestion de grands assemblages sous 3DEXPERIENCE et CATIA V5.</li>
-          <li><strong>Calculs de Structures :</strong> Analyses par éléments finis (EF) statiques et dynamiques pour optimiser la tenue mécanique tout en réduisant la masse.</li>
-          <li><strong>Analyse de Résultats :</strong> Exploitation des données de simulation, corrélation essais/calculs et propositions de modifications de conception.</li>
-        </ul>
-      </div>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// BILAN & APPORTS STRATÉGIQUES</h2>
+        <p class="leading-relaxed mb-6">
+          Au-delà de la conception technique pure, ce projet de fin d'études a permis de structurer des livrables industriels majeurs et de consolider des compétences d'ingénierie avancées directement transposables pour mes réussites futures.
+        </p>
 
-      <!-- Outils -->
-      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
-        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// 03. TECHNOLOGIES & OUTILS</h2>
-        <div class="flex flex-wrap gap-3 font-mono text-xs">
-          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">3DEXPERIENCE</span>
-          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">CATIA V5</span>
-          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Abaqus / ANSYS</span>
-          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Calcul Élément Fini</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Ce que le projet a permis de faire concrètement -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">🎯 Réalisations Concrètes</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Modernisation d'un banc critique :</strong> Fiabilisation d'un moyen d'essai soumis à des conditions environnementales extrêmes (-35°C à +65°C, 95% d'humidité).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Maîtrise des régulations complexes :</strong> Synchronisation réussie entre la thermique, l'aérautique et l'asservissement pneumatique pour cibler une plage stable (15°C à 30°C).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Validation opérationnelle :</strong> Capacité à tester des actionneurs dynamiques sous charge (jusqu'à 100 N à 0.1 m/s) en s'affranchissant des perturbations extérieures.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ce que cela m'apporte pour mes réussites futures -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Apports & Vision Future</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Vision systémique globale :</strong> Capacité à appréhender un projet industriel de bout en bout, de la conception CAO/Multiphysique jusqu'au déploiement sur le banc.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Expertise multi-domaines pointue :</strong> Renforcement de mes compétences clés en thermique, dynamique des fluides, pneumatique et automatismes (MATLAB/Simulink).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Posture d'ingénieur autonome en BE :</strong> Aptitude à mener des choix techniques rigoureux face à des cahiers des charges sévères, un atout clé pour mes futurs défis en R&D et conception.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <!-- Outils & Compétences -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// TECHNOLOGIES & OUTILS ASSOCIÉS</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Circuits Pneumatiques</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Thermique & Aéraulique</span>
+	  <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Asservissement et Régulation</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Conception Mécanique</span>
+	  <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">MATLAB / Simulink</span>
+	  <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">CATIA(3DX)</span>
+	  <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Ansys Fluent</span>
+        </div>
+      </div>
+
     </div>
 
     <!-- Bouton Retour Bas de Page -->
