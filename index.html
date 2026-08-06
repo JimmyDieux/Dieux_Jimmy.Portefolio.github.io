@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Ingénieur | Aéronautique & Automobile</title>
+  <title>Jimmy Dieux | Ingénieur Aéronautique & Aérospatiale</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -37,30 +37,25 @@
     }
   </style>
 </head>
-<body class="bg-slate-100 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
 
-  <!-- Barre de Navigation Interface -->
-  <nav class="bg-white border-b border-gray-200 dark:bg-[#14181f] dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+  <!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/95 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo / Identité -->
       <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
-        JIMMY DIEUX<span class="text-cyan-600 dark:text-cyan-400">.ENG</span>
+        JIMMY DIEUX<span class="text-cyan-600 dark:text-cyan-400">.ING</span>
       </a>
 
-<!-- Liens Navigation & Toggle -->
       <div class="flex items-center space-x-6 text-sm font-mono">
         <a href="index.html" class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1">Accueil</a>
         <a href="Profil.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profil</a>
-        <a href="Projets.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Expériences & Projets</a>
+        <a href="Projets.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Projets</a>
         <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
 
-        <!-- Bouton Mode Sombre / Clair -->
-        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-200 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Changer de thème">
-          <!-- Icône Soleil (visible en mode sombre) -->
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Changer de thème">
           <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
-            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
           </svg>
-          <!-- Icône Lune (visible en mode clair) -->
           <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
           </svg>
@@ -69,78 +64,290 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto min-h-[85vh] flex flex-col justify-center">
-    <div class="inline-block px-3 py-1 bg-gray-200 dark:bg-brand-border rounded-full text-xs font-mono text-cyan-600 dark:text-brand-cyan mb-6 w-fit">
-      SYSTEM STATUS: ONLINE // AEROSPACE & AUTOMOTIVE ENGINEER
+<!-- Banderole Hero avec Grande Image et Texte étendu en bas -->
+<section class="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-2xl min-h-[400px] flex flex-col justify-end p-8 md:p-12 mb-12">
+  
+  <!-- Image de fond avec Overlay sombre pour la lisibilité -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/71.png" alt="Aérodynamique et Ingénierie" class="w-full h-full object-cover object-center filter brightness-50 dark:brightness-40">
+    <!-- Dégradé vertical du bas pour garantir la lisibilité du texte sur toute la largeur -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+  </div>
+
+  <!-- Contenu texte positionné en bas et étendu sur toute la largeur -->
+  <div class="relative z-10 w-full space-y-4">
+    
+    <div class="inline-flex items-center gap-2 bg-cyan-950/80 border border-cyan-800 px-3 py-1 rounded text-xs font-mono text-cyan-400 mb-2">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      <span>VISION & PASSION</span>
     </div>
-    <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-none mb-6">
-      Ingénierie Aéronautique, <br>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-brand-accent dark:from-brand-cyan dark:to-brand-accent">
-        CFD & Performance Mécanique.
-      </span>
-    </h1>
-    <p class="max-w-2xl text-gray-600 dark:text-gray-400 text-lg mb-8">
-      Conception de systèmes complexes, simulation numérique des fluides, calcul de structures et intégration pneumatique haute précision.
+
+    <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight w-full">
+      Transformer l'équation physique en performance réelle.
+    </h2>
+
+    <p class="text-sm md:text-lg text-gray-200 font-sans leading-relaxed w-full">
+      De la soufflerie numérique au montage en atelier : exploration des limites mécaniques et aérodynamiques à travers l'expérimentation et le prototypage, pour concevoir les systèmes de demain.
     </p>
-    <div class="flex flex-wrap gap-4 font-mono">
-      <a href="Projets.html" class="bg-brand-accent hover:bg-red-700 text-white px-6 py-3 font-semibold rounded transition flex items-center gap-2">
-        Explorer mes projets <span>→</span>
-      </a>
-      <a href="Profil.html" class="border border-gray-300 dark:border-brand-border hover:border-gray-500 dark:hover:border-gray-400 text-gray-800 dark:text-white px-6 py-3 font-semibold rounded transition">
-        Voir mon parcours
-      </a>
-    </div>
-  </section>
 
-  <!-- Section Galerie & Univers Technique -->
-  <section class="py-16 px-6 max-w-7xl mx-auto border-t border-gray-200 dark:border-brand-border">
-    <div class="mb-10">
-      <span class="text-xs font-mono text-cyan-600 dark:text-brand-cyan uppercase">// VISUAL OVERVIEW</span>
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-1">// SECTEURS D'APPLICATION</h2>
-    </div>
+  </div>
+</section>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- Hero Section : Disposition avec vignette latérale -->
+  <main class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
       
-      <!-- Carte 1: Aéronautique & Fusée -->
-      <a href="Projets.html" class="group relative h-80 rounded-xl overflow-hidden border border-gray-200 dark:border-brand-border bg-white dark:bg-brand-card shadow-sm dark:shadow-none">
-        <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=800&q=80" alt="Aéronautique" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85 dark:opacity-70 group-hover:opacity-100">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent dark:from-brand-bg dark:via-transparent"></div>
-        <div class="absolute bottom-4 left-4 right-4">
-          <span class="text-xs font-mono text-cyan-400 dark:text-brand-cyan uppercase">Aéronautique & Spatial</span>
-          <h3 class="text-xl font-bold text-white">Calculs de Structure & Aéro</h3>
+      <!-- Colonne Principale (Bio / Titre) -->
+      <div class="lg:col-span-8 bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-between space-y-8">
+        
+        <div class="space-y-4 border-b border-gray-200 dark:border-[#232a35] pb-8">
+          <div class="inline-flex items-center gap-2 bg-cyan-50 dark:bg-cyan-950/50 border border-cyan-200 dark:border-cyan-800/50 px-3 py-1 rounded text-xs font-mono text-cyan-600 dark:text-cyan-400">
+            <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+            <span>INGÉNIEUR AÉRONAUTIQUE & AÉROSPATIALE</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
+            Jimmy Dieux
+          </h1>
+          
+          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-sans">
+            Diplômé d'ELISA Aerospace et ex-bureau d'études de Renault Group. Spécialisé en modélisation multiphysique, conception CAO avancée et aérodynamique appliquée au sport automobile. Passionné par l'innovation technique, l'optimisation des flux aérodynamiques et la gestion de projets complexes de la conception à la réalisation pratique.
+          </p>
         </div>
-      </a>
 
-      <!-- Carte 2: Automobile & Motorsport -->
-      <a href="Projets.html" class="group relative h-80 rounded-xl overflow-hidden border border-gray-200 dark:border-brand-border bg-white dark:bg-brand-card shadow-sm dark:shadow-none">
-        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" alt="Automobile" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85 dark:opacity-70 group-hover:opacity-100">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent dark:from-brand-bg dark:via-transparent"></div>
-        <div class="absolute bottom-4 left-4 right-4">
-          <span class="text-xs font-mono text-red-400 dark:text-brand-accent uppercase">Automobile & Compétition</span>
-          <h3 class="text-xl font-bold text-white">Châssis & Liaisons au Sol</h3>
+        <!-- Boutons d'action -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="Projets.html" class="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-3 rounded-xl font-mono text-sm font-semibold shadow-lg shadow-cyan-600/20 transition-all flex items-center gap-2">
+            Explorer mes projets →
+          </a>
+          <a href="Profil.html" class="bg-slate-100 dark:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 text-gray-800 dark:text-gray-200 px-6 py-3 rounded-xl font-mono text-sm transition-all">
+            Parcours & Compétences
+          </a>
         </div>
-      </a>
 
-      <!-- Carte 3: Bancs de test & Pneumatique -->
-      <a href="Projets.html" class="group relative h-80 rounded-xl overflow-hidden border border-gray-200 dark:border-brand-border bg-white dark:bg-brand-card shadow-sm dark:shadow-none">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Bancs de test" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85 dark:opacity-70 group-hover:opacity-100">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent dark:from-brand-bg dark:via-transparent"></div>
-        <div class="absolute bottom-4 left-4 right-4">
-          <span class="text-xs font-mono text-gray-300 dark:text-gray-400 uppercase">Systèmes & Essais</span>
-          <h3 class="text-xl font-bold text-white">Régulation 60 mbar & Festo</h3>
+      </div>
+
+      <!-- Colonne Latérale (Vignette / Bloc de statut) -->
+      <div class="lg:col-span-4 flex flex-col">
+        
+        <!-- Vignette principale latérale -->
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-3xl p-6 shadow-lg shadow-slate-200/50 dark:shadow-none flex flex-col justify-between space-y-6 relative overflow-hidden h-full">
+          <div class="absolute -right-10 -top-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-gray-200 dark:border-[#232a35] pb-4">
+              <span class="font-mono text-xs text-gray-400">// QUICK STATS</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+
+            <div class="space-y-3 font-mono text-sm">
+              <div class="bg-slate-50 dark:bg-[#0b0d10] p-3.5 rounded-2xl border border-gray-100 dark:border-[#232a35]">
+                <div class="text-xs text-gray-400 mb-1">Diplôme</div>
+                <div class="text-cyan-600 dark:text-cyan-400 font-bold">ELISA Aerospace (Bac+5)</div>
+              </div>
+
+              <div class="bg-slate-50 dark:bg-[#0b0d10] p-3.5 rounded-2xl border border-gray-100 dark:border-[#232a35]">
+                <div class="text-xs text-gray-400 mb-1">Dernière Expérience</div>
+                <div class="text-gray-900 dark:text-white font-bold">Stage fin d'étude - Renault Group</div>
+              </div>
+
+              <div class="bg-slate-50 dark:bg-[#0b0d10] p-3.5 rounded-2xl border border-gray-100 dark:border-[#232a35]">
+                <div class="text-xs text-gray-400 mb-1">Spécialités</div>
+                <div class="text-gray-900 dark:text-white font-bold">Aérodynamique, Mécanique & Simulation</div>
+              </div>
+
+              <div class="bg-slate-50 dark:bg-[#0b0d10] p-3.5 rounded-2xl border border-gray-100 dark:border-[#232a35]">
+                <div class="text-xs text-gray-400 mb-1">Localisation</div>
+                <div class="text-gray-900 dark:text-white font-bold">Île-de-France, Hauts-de-France</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="contact.html" class="w-full block text-center bg-slate-100 dark:bg-[#1f2630] hover:bg-cyan-600 hover:text-white dark:hover:bg-cyan-600 text-gray-700 dark:text-gray-200 py-3 rounded-xl font-mono text-xs font-semibold transition-all border border-gray-200 dark:border-[#232a35]">
+              Discuter d'une opportunité
+            </a>
+          </div>
         </div>
-      </a>
+
+      </div>
 
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-200 dark:border-brand-border py-8 text-center font-mono text-xs text-gray-500">
-    <p>© PORTFOLIO INGÉNIEUR — CONÇU POUR L'AÉRONAUTIQUE & L'AUTOMOBILE</p>
+    <!-- Section Chiffres Clés (Strictement uniforme : texte bleu/gras en haut, petit texte en bas) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+      <!-- Carte 1 -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-6 rounded-2xl text-center flex flex-col justify-center items-center min-h-[140px] shadow-sm">
+        <div class="text-3xl font-bold font-mono text-cyan-600 dark:text-cyan-400 mb-1">Bac+5</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Diplôme Ingénieur Aéro</div>
+      </div>
+      
+      <!-- Carte 2 -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-6 rounded-2xl text-center flex flex-col justify-center items-center min-h-[140px] shadow-sm">
+        <div class="text-2xl font-bold font-mono text-cyan-600 dark:text-cyan-400 mb-1 leading-snug">Bureau d'Études</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Renault Group</div>
+      </div>
+      
+      <!-- Carte 3 -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-6 rounded-2xl text-center flex flex-col justify-center items-center min-h-[140px] shadow-sm">
+        <div class="text-lg font-bold font-mono text-cyan-600 dark:text-cyan-400 mb-1">Équipe gérée (Assoc.)</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">30+ Pers.</div>
+      </div>
+      
+      <!-- Carte 4 -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-6 rounded-2xl text-center flex flex-col justify-center items-center min-h-[140px] shadow-sm">
+        <div class="text-xl font-bold font-mono text-cyan-600 dark:text-cyan-400 mb-1 leading-snug">CFD / Simulink</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Expertise Simulation</div>
+      </div>
+    </div>
+
+    <!-- Section Projets Phares Visuels -->
+    <div class="space-y-8 mt-20">
+      <div class="flex items-center justify-between border-b border-gray-200 dark:border-[#232a35] pb-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white font-mono">// RÉALISATIONS & PROJETS</h2>
+        <a href="Projets.html" class="font-mono text-sm text-cyan-600 dark:text-cyan-400 hover:underline">Voir tout →</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Carte 1 -->
+        <a href="Projet_AileronF1.html" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <div class="h-40 bg-gradient-to-br from-slate-900 to-slate-800 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded w-fit border border-cyan-800/50">CFD / FIA 2024</span>
+            <div class="text-white font-bold text-lg">Aileron Arrière F1</div>
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Simulation numérique sous SolidWorks Flow Simulation et analyse fine de l'incidence du DRS en configurations circuit.
+            </p>
+          </div>
+          <div class="px-6 py-4 bg-slate-50 dark:bg-[#0b0d10] border-t border-gray-200 dark:border-[#232a35] font-mono text-xs text-gray-500 flex justify-between items-center">
+            <span>SolidWorks / ANSYS</span>
+            <span class="group-hover:translate-x-1 transition-transform text-cyan-600 dark:text-cyan-400 font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Carte 2 -->
+        <a href="Projet_AvionCombat.html" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <div class="h-40 bg-gradient-to-br from-slate-900 to-slate-800 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+            <span class="text-xs font-mono text-amber-400 bg-amber-950/80 px-2.5 py-1 rounded w-fit border border-amber-800/50">AÉRONAUTIQUE</span>
+            <div class="text-white font-bold text-lg">Avion de Combat Delta-Canard</div>
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Conception d'architecture générale, étude des volumes internes et chiffrage des masses pour un chasseur de supériorité.
+            </p>
+          </div>
+          <div class="px-6 py-4 bg-slate-50 dark:bg-[#0b0d10] border-t border-gray-200 dark:border-[#232a35] font-mono text-xs text-gray-500 flex justify-between items-center">
+            <span>3DEXPERIENCE / CATIA</span>
+            <span class="group-hover:translate-x-1 transition-transform text-cyan-600 dark:text-cyan-400 font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Carte 3 -->
+        <a href="Projet_LevyStation.html" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <div class="h-40 bg-gradient-to-br from-slate-900 to-slate-800 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded w-fit border border-emerald-800/50">SYSTÈMES & VTOL</span>
+            <div class="text-white font-bold text-lg">LévyStation – Drone Médical</div>
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Étude d'un aéronef VTOL hybride de transport d'urgence de 750 kg avec intégration de soute thermique régulée.
+            </p>
+          </div>
+          <div class="px-6 py-4 bg-slate-50 dark:bg-[#0b0d10] border-t border-gray-200 dark:border-[#232a35] font-mono text-xs text-gray-500 flex justify-between items-center">
+            <span>ANSYS / MATLAB</span>
+            <span class="group-hover:translate-x-1 transition-transform text-cyan-600 dark:text-cyan-400 font-bold">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Section Leadership & Engagement -->
+    <div class="space-y-6 mt-20">
+      <div class="border-b border-gray-200 dark:border-[#232a35] pb-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white font-mono">// LEADERSHIP & IMPLICATION</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-sm">
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-6 rounded-2xl space-y-3 shadow-sm">
+          <div class="text-xs text-cyan-600 dark:text-cyan-400">PRÉSIDENT - ELISA SPORTS MÉCA</div>
+          <div class="text-lg font-bold text-gray-900 dark:text-white">Gestion de Projets & Équipe</div>
+          <p class="text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+            Pilotage global de l'association : recrutement et formation des membres (passage de 2 à 30 actifs en 24 mois), gestion budgétaire et allocation des ressources entre 3 projets techniques simultanés.
+          </p>
+        </div>
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-6 rounded-2xl space-y-3 shadow-sm">
+          <div class="text-xs text-amber-600 dark:text-amber-400">PROJETS MÉCANIQUES & RESTAURATION</div>
+          <div class="text-lg font-bold text-gray-900 dark:text-white">Passion & Pratique Automobile</div>
+          <p class="text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+            Implication concrète dans la préparation de véhicules (4L Trophy, Citroën C2 VTS), soudure, fabrication de prototypes et optimisation de configurations en simulation (Simracing / endurance).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Stack Technique Visuelle -->
+    <div class="space-y-6 mt-20">
+      <div class="border-b border-gray-200 dark:border-[#232a35] pb-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white font-mono">// ENVIRONNEMENT TECHNIQUE</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-sm">
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-2xl shadow-sm">
+          <div class="text-cyan-600 dark:text-cyan-400 font-bold mb-2">CAO / Modélisation</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+            <div>• SolidWorks</div>
+            <div>• CATIA V5 / 3DEXPERIENCE</div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-2xl shadow-sm">
+          <div class="text-cyan-600 dark:text-cyan-400 font-bold mb-2">Calculs & CFD</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+            <div>• ANSYS Workbench & Fluent</div>
+            <div>• Flow Simulation</div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-2xl shadow-sm">
+          <div class="text-cyan-600 dark:text-cyan-400 font-bold mb-2">Systèmes & Automatique</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+            <div>• MATLAB / Simulink</div>
+            <div>• Python / C++</div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-2xl shadow-sm">
+          <div class="text-cyan-600 dark:text-cyan-400 font-bold mb-2">Passions</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+            <div>• Sport Auto / Simracing</div>
+            <div>• Aéronautique & Spatial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer Technique -->
+  <footer class="bg-white dark:bg-[#14181f] border-t border-gray-200 dark:border-[#232a35] py-12 mt-20 transition-colors duration-200">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm font-mono">
+      <div class="text-gray-600 dark:text-gray-400">
+        JIMMY DIEUX <span class="text-cyan-600 dark:text-cyan-400">//</span> INGÉNIEUR AÉRONAUTIQUE & SYSTÈMES
+      </div>
+      <div class="flex items-center space-x-6 text-gray-600 dark:text-gray-400">
+        <a href="index.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Accueil</a>
+        <a href="Profil.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Profil</a>
+        <a href="Projets.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Projets</a>
+        <a href="contact.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Contact</a>
+      </div>
+      <div class="text-xs text-gray-500">
+        © 2026 — HTML5 / Tailwind CSS Pur
+      </div>
+    </div>
   </footer>
 
-  <!-- Script du Theme Toggle -->
+  <!-- Script Theme Toggle -->
   <script>
     (function() {
       const themeToggleBtn = document.getElementById('theme-toggle');
@@ -154,12 +361,16 @@
       function setDarkMode(enable) {
         if (enable) {
           document.documentElement.classList.add('dark');
-          sunIcon.classList.remove('hidden');
-          moonIcon.classList.add('hidden');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
         } else {
           document.documentElement.classList.remove('dark');
-          sunIcon.classList.add('hidden');
-          moonIcon.classList.remove('hidden');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
         }
       }
 

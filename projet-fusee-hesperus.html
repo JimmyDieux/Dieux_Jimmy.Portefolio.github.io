@@ -78,7 +78,7 @@
         <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">ASSOCIATION ELISA SPACE</span>
       </div>
       <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Mini-Fusée Hespérus (MF23)</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl text-justify">
         Management de projet, conception & intégration mécanique pour le lancement d'une mini-fusée expérimentale de 1,45 kg à 318 mètres d'altitude lors du C'space 2022.
       </p>
     </div>
@@ -86,9 +86,7 @@
   <!-- Image Principale / Logo Mission -->
     <div class="relative rounded-xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-xl mb-6 bg-slate-900">
       <div class="relative h-72 md:h-96 w-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-900 via-[#14181f] to-slate-950">
-        <!-- Lien vers l'image sur GitHub -->
         <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/17.jpg" alt="Mini-Fusée Hespérus sur sa rampe de lancement" class="w-full h-full object-cover">
-        <!-- Overlay optionnel pour intégrer le texte proprement sur l'image -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-8">
           <p class="text-cyan-400 font-mono text-xs uppercase tracking-widest mb-1">// Mission Officielle C'Space 2022</p>
           <p class="text-white font-mono text-sm md:text-base font-medium">Vol nominal validé le 21 juillet 2022 / Planète Sciences.</p>
@@ -152,17 +150,17 @@
       
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6 font-mono text-cyan-700 dark:text-cyan-400">// ARCHITECTURE & CONCEPTION MÉCANIQUE</h2>
-        <p class="leading-relaxed mb-8">
+        <p class="leading-relaxed mb-8 text-justify">
           En tant que Chef de Projet et responsable de la conception mécanique d'Hespérus, j'ai piloté l'équipe constituée de 5 étudiants de cycle préparatoire pour concevoir, structurer et assembler l'ensemble des sous-systèmes de la fusée en moins d'un an, en respectant scrupuleusement le cahier des charges de Planète Sciences.
         </p>
 
 <!-- Module 1 -->
         <div class="border-l-4 border-cyan-500 pl-6 mb-8">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Corps Porteur & Aérodynamismme</h3>
-          <p class="leading-relaxed mb-4">
+          <p class="leading-relaxed mb-4 text-justify">
             La structure externe repose sur un tube rond en aluminium de 60 mm de diamètre extérieur, d'une épaisseur de 1,5 mm et d'une longueur totale de 95 cm, portant la dimension globale de la fusée à 1010 mm. Ce matériau a été retenu pour sa rigidité structurelle exceptionnelle face aux charges dynamiques en phase de propulsion et sa légèreté.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed mb-6 text-justify">
             La liaison des 4 ailerons a fait l'objet d'une attention particulière : ils sont fixés rigidement au corps porteur pour garantir un centre de poussée stable, rejeté en aval du centre de gravité afin d'assurer une marge statique conforme aux exigences de sécurité du vol.
           </p>
           <!-- Photos CAO / Schémas -->
@@ -185,10 +183,10 @@
         <!-- Module 2 -->
         <div class="border-l-4 border-amber-500 pl-6 mb-8">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Compartimentage Interne & Récupération</h3>
-          <p class="leading-relaxed mb-4">
+          <p class="leading-relaxed mb-4 text-justify">
             L'architecture interne est subdivisée en quatre sections modulaires distinctes pour faciliter l'intégration et la maintenance : la coiffe, le compartiment de récupération, la baie avionique et le logement de propulsion.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed mb-6 text-justify">
             Le système de récupération se compose d'un parachute en nylon de 60 cm de diamètre, équipé de 8 suspentes de 150 cm et d'une bague anti-torche. L'éjection est déclenchée par l'ouverture d'une trappe latérale commandée par un servomoteur logé dans la coiffe supérieure en PLA, actionné au signal de l'apogée par la double séquence de mise à feu sécurisée.
           </p>
           <!-- Photos Trappe / Parachute -->
@@ -211,10 +209,10 @@
         <!-- Module 3 -->
         <div class="border-l-4 border-emerald-500 pl-6">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Électronique & Double Séquenceur</h3>
-          <p class="leading-relaxed mb-4">
+          <p class="leading-relaxed mb-4 text-justify">
             La gestion du vol repose sur une architecture électronique cloisonnée, séparant la carte parachute (Arduino Nano) de la carte dédiée aux expériences embarquées (Arduino Every). Les deux entités communiquent via un port de communication série isolé électriquement par des optocoupleurs afin d'éviter toute interférence ou retour de courant intempestif.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed mb-6 text-justify">
             L'acquisition des paramètres de vol est assurée par un ensemble de capteurs incluant un baromètre et une centrale inertielle (MPU6050, capteur BME280) mesurant en temps réel la pression atmosphérique, la température et l'accélération axiale/transversale. L'activation des systèmes se fait par une prise jack de déclenchement par arrachement au moment du décollage de la rampe.
           </p>
           <!-- Photos Électronique -->
@@ -238,7 +236,7 @@
       <!-- SECTION : Bilan du Vol & Résultats -->
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// DÉROULEMENT DU VOL & RÉSULTATS EXPÉRIMENTAUX</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="leading-relaxed mb-6 text-justify">
           Lancée avec succès le 21 juillet 2022 sous des conditions météorologiques optimales (CAVOK, vent de 5 nœuds, température au sol de 31°C), la mission s'est conclue par un vol nominal validé par la direction de Planète Sciences.
         </p>
 
@@ -246,7 +244,7 @@
           <!-- Données de Vol -->
           <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
             <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">📈 Données Clés Enregistrées</h3>
-            <ul class="space-y-3 text-sm">
+            <ul class="space-y-3 text-sm text-justify">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500 font-bold">▸</span>
                 <span><strong>Apogée :</strong> 318 mètres au-dessus du sol (650 m alt. absolue).</span>
@@ -265,7 +263,7 @@
           <!-- Apports & Compétences -->
           <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
             <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Bilan Managérial & Technique</h3>
-            <ul class="space-y-3 text-sm">
+            <ul class="space-y-3 text-sm text-justify">
               <li class="flex items-start gap-2">
                 <span class="text-cyan-500 font-bold">▸</span>
                 <span><strong>Management transverse :</strong> Coordination d'une équipe de 5 étudiants et gestion des interfaces avec les experts de Planète Sciences.</span>

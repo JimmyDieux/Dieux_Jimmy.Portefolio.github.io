@@ -78,7 +78,7 @@
         <span class="text-gray-600 dark:text-gray-400 text-xs font-mono py-1">SYSTÈMES AUTONOMES & LOIS DE GUIDAGE</span>
       </div>
       <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Lois de Guidage & Observation Multicibles pour Drone Autonome</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl">
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify max-w-4xl">
         Étude théorique, modélisation sous MATLAB/Simulink et analyse des performances de lois de guidage cinématique (attraction, alignement et cerclage) pour l'interception et l'observation séquentielle de multiples cibles mobiles au sol par un véhicule aérien sans pilote.
       </p>
     </div>
@@ -117,7 +117,7 @@
       </div>
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
         <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Cibles Mobiles (Sol)</div>
-        <div class="text-lg font-bold text-amber-500 font-mono">3 Cibles (V = 1.5 m/s)</div>
+        <div class="text-lg font-bold text-amber-500 font-mono">3 Cibles</div>
       </div>
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
         <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Seuil Commutation</div>
@@ -130,7 +130,7 @@
       
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-8">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// ARCHITECTURE DE LA MISSION & MODÉLISATION CINÉMATIQUE</h2>
-        <p class="leading-relaxed">
+        <p class="leading-relaxed text-justify">
           Le problème s'articule autour d'un drone poursuivant initialement positionné en [0, 0, 50] avec une vitesse initiale de [10, 0, 0] m/s. Les trois cibles au sol évoluent à vitesse constante identique égale à [1.5, 1.5, 0] m/s, tandis qu'un observateur fixe est posté en [-200, -20, 100].
         </p>
 
@@ -138,10 +138,10 @@
         <div class="border-l-4 border-cyan-500 pl-6 space-y-3">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">1. Étude n°1 : Guidage Cinématique & Phase de Ralliement</h3>
           <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Utilisation d'une cible virtuelle pour satisfaire la contrainte d'altitude constante</p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-justify">
             Afin d'empêcher toute variation d'altitude non désirée vers les cibles situées au sol (z=0), une cible virtuelle est projetée au plan de vol du drone à z = 50 m. Le vecteur d'attraction est défini par la position relative entre le drone et cette cible virtuelle.
           </p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-justify">
             Une logique de séquencement intégrée via un bloc de commutation séquentielle (Multiport Switch) permet au drone de basculer instantanément d'un objectif vers le suivant dès lors que la distance horizontale franchit le seuil critique des 10 mètres.
           </p>
 
@@ -149,7 +149,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/51.png" alt="Loi de guidage du drone sans bruit ni perturbation" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure : Loi de guidage du drone sans bruit ni perturbation.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 2 : Loi de guidage du drone sans bruit ni perturbation.</p>
             </div>
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/52.png" alt="Zone du Simulink garantissant le bon choix de la cible" class="w-full h-auto rounded">
@@ -159,11 +159,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/53.png" alt="Distance Drone - Cible actuelle" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure : Distance Drone - Cible actuelle au cours du temps.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 4 : Distance Drone - Cible actuelle au cours du temps.</p>
             </div>
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/54.png" alt="Accélération Normale et Angles" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure : Évolution de l'accélération normale et des angles.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 5 : Évolution de l'accélération normale et des angles.</p>
             </div>
           </div>
         </div>
@@ -172,17 +172,17 @@
         <div class="border-l-4 border-amber-500 pl-6 space-y-3">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">2. Guidage par Alignement sur la Droite Observateur–Cible Virtuelle</h3>
           <p class="text-xs font-mono text-amber-600 dark:text-amber-400">Maîtrise de la ligne de visée et application d'un système du second ordre amorti</p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-justify">
             Pour s'affranchir des trajectoires désordonnées de la loi d'attraction simple, un guidage par alignement orthogonal est implémenté. La dynamique de l'écart r(t) obéit à une forme canonique du second ordre :
           </p>
-          <p style="text-align: center;">r¨(t) + 2ξωnr˙(t) + ωn2r(t) = 0.</p>
-          <p class="leading-relaxed mb-4">
-            Avec un amortissement fixé à &xi; = 0.8 pour prévenir les oscillations, et une pulsation propre &omega;<sub>n</sub> liée au temps de réponse T<sub>r</sub>, les gains correctifs
+          <p class="text-center font-mono my-2">r̈(t) + 2ξω<sub>n</sub>ṙ(t) + ω<sub>n</sub><sup>2</sup>r(t) = 0</p>
+          <p class="leading-relaxed mb-4 text-justify">
+            Avec un amortissement fixé à ξ = 0.8 pour prévenir les oscillations, et une pulsation propre ωn liée au temps de réponse Tr, les gains correctifs
           </p>
-          <p class="text-center">
-            k<sub>1</sub> = 2&xi;&omega;<sub>n</sub> = 8 / T<sub>r</sub> &nbsp;&nbsp; et &nbsp;&nbsp; k<sub>2</sub> = &omega;<sub>n</sub><sup>2</sup> = 16 / (&xi;<sup>2</sup> T<sub>r</sub><sup>2</sup>)
+          <p class="text-center font-mono my-2">
+            k<sub>1</sub> = 2&xi;&omega;<sub>n</sub> = <sup>8</sup>&frasl;<sub>T<sub>r</sub></sub> &nbsp;&nbsp; et &nbsp;&nbsp; k<sub>2</sub> = &omega;<sub>n</sub><sup>2</sup> = <sup>16</sup>&frasl;<sub>&xi;<sup>2</sup> T<sub>r</sub><sup>2</sup></sub>
           </p>
-          <p class="leading-relaxed mt-4">
+          <p class="leading-relaxed mt-4 text-justify">
             garantissent une convergence régulière et une ligne de visée optimale pour l'observateur fixe.
           </p>
 
@@ -190,11 +190,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/55.png" alt="Nouvelle loi de navigation pour intégrer k1 et k2" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 7 : Nouvelle loi de navigation pour intégrer k1 et k2.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 6 : Nouvelle loi de navigation pour intégrer k1 et k2.</p>
             </div>
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/56.png" alt="Trajectoires pour un temps de réponse très grand vs très petit" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figures 8 & 9 : Trajectoires pour un temps de réponse très grand et très petit.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figures 7 & 8 : Trajectoires pour un temps de réponse très grand et très petit.</p>
             </div>
           </div>
         </div>
@@ -203,13 +203,13 @@
         <div class="border-l-4 border-emerald-500 pl-6 space-y-3">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">3. Étude n°2 : Guidage Circulaire pour l'Observation des Cibles</h3>
           <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400">Combinaison des phases de transit (alignement) et d'observation (cerclage)</p>
-          <p class="leading-relaxed">
-            Lorsque le drone entre dans la zone d'observation (d < 100 m), la loi de navigation bascule vers un guidage circulaire pilotant directement le taux de virage $\dot{\psi}$ à partir de l'angle d'écart $\eta$ par rapport à la ligne de visée :
+          <p class="leading-relaxed text-justify">
+            Lorsque le drone entre dans la zone d'observation d < 100 m, la loi de navigation bascule vers un guidage circulaire pilotant directement le taux de virage ψ à partir de l'angle d'écart ξ par rapport à la ligne de visée :
           </p>
           <p class="text-center font-mono my-4">
-            &psi;&#775; = V<sup>2</sup> / R<sub>ref</sub> + K sin(&eta;) / V
+           &psi;&#775; = <sup>V<sup>2</sup></sup>&frasl;<sub>R<sub>ref</sub></sub> + <sup>K sin(&eta;)</sup>&frasl;<sub>V</sub>
           </p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-justify">
             Cette formulation théorique intègre un rayon de référence Rref et un gain correctif K (testé pour K=0.2, K=1, et K=2) destiné à assurer un cerclage stable permettant d'effectuer 2 à 3 révolutions d'observation par cible.
           </p>
 
@@ -217,11 +217,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/57.png" alt="Nouvelle loi de navigation circulaire" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 10 : Nouvelle loi de navigation circulaire.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 9 : Nouvelle loi de navigation circulaire.</p>
             </div>
             <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
               <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/58.png" alt="Branchement pour le changement de loi de navigation" class="w-full h-auto rounded">
-              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 11 : Branchement pour le changement de loi de navigation.</p>
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 10 : Branchement pour le changement de loi de navigation.</p>
             </div>
           </div>
         </div>
@@ -230,10 +230,10 @@
         <div class="border-l-4 border-cyan-500 pl-6 space-y-3">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">4. Bilan Critique & Pistes d'Amélioration du Modèle Simulink</h3>
           <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Analyse comparative et identification des limites pratiques du cahier des charges</p>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed text-justify">
             Bien que les commutations de lois de navigation fonctionnent sous Simulink, la confrontation aux exigences de mission met en relief des limites techniques nettes :
           </p>
-          <ul class="list-disc pl-5 space-y-2 text-sm">
+          <ul class="list-disc pl-5 space-y-2 text-sm text-justify">
             <li><strong>Absence de comptage de tours :</strong> Le drone ne réalise pas les 2 à 3 révolutions exigées autour de chaque cible, faute de blocs de comptage d'angles cumulés intégrés dans la boucle de commutation.</li>
             <li><strong>Sensibilité des gains :</strong> Les variations du gain K n'influent pas de manière prononcée sur la trajectoire simulée, révélant un besoin d'ajustement dynamique de l'implémentation du correcteur de cap.</li>
           </ul>
@@ -243,24 +243,24 @@
       <!-- Section : Bilan & Apports Stratégiques -->
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-6">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// BILAN TECHNIQUE & PERSPECTIVES D'ÉVOLUTION</h2>
-        <p class="leading-relaxed">
+        <p class="leading-relaxed text-justify">
           Ce projet académique a permis d'approfondir la conception de lois de commande pour systèmes aérospatiaux non-linéaires sous environnement MATLAB/Simulink, en validant le compromis entre simplicité de ralliement et qualité d'observation géométrique.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg space-y-3">
             <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono text-amber-600 dark:text-amber-400">🎯 Compétences & Apports Clés</h3>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-2 text-sm text-justify">
               <li class="flex items-start gap-2">
-                <span class="text-amber-500 font-bold">▸</span>
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
                 <span><strong>Modélisation Simulink :</strong> Conception de schémas blocs multiniveaux, gestion de commutations multiports et fonctions MATLAB intégrées.</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-amber-500 font-bold">▸</span>
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
                 <span><strong>Commande Avancée :</strong> Application de lois de guidage par potentiels, alignement du second ordre (ξ, ω) et cerclage.</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-amber-500 font-bold">▸</span>
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
                 <span><strong>Analyse de Trajectoires :</strong> Étude critique de la stabilité, du temps de réponse et des lignes de visée multi-observateurs.</span>
               </li>
             </ul>
@@ -268,17 +268,17 @@
 
           <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg space-y-3">
             <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono text-cyan-600 dark:text-cyan-400">🚀 Pistes d'Optimisation Futures</h3>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-2 text-sm text-justify">
               <li class="flex items-start gap-2">
-                <span class="text-cyan-500 font-bold">▸</span>
-                <span><strong>Logique de Comptage :</strong> Intégration d'un compteur d'angle cumulé ψ pour garantir le nombre de révolutions requis avant commutation.</span>
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Logique de Comptage :</strong> Intégration d'un compteur d'angle cumulé $\psi$ pour garantir le nombre de révolutions requis avant commutation.</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-cyan-500 font-bold">▸</span>
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
                 <span><strong>Modèles Dynamiques Réalistes :</strong> Remplacement de l'approche purement cinématique par un modèle dynamique complet de drone (vecteur force/moment).</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-cyan-500 font-bold">▸</span>
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
                 <span><strong>Robustesse au Bruit :</strong> Ajout de perturbations et de bruits de mesure sur les capteurs de position pour tester la résilience des lois de guidage.</span>
               </li>
             </ul>

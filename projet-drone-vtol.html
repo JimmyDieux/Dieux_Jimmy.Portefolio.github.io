@@ -35,6 +35,10 @@
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
+    /* Ajout de la classe de justification pour les paragraphes textuels */
+    .text-justify-custom {
+      text-align: justify;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
@@ -78,7 +82,7 @@
         <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">CONCEPTION AVANCÉE D'UN VTOL</span>
       </div>
       <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">LévyStation – Drone Médical VTOL à Propulsion Hybride</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl text-justify-custom">
         Étude d'ingénierie globale d'un aéronef de transport d'urgence à décollage et atterrissage vertical, combinant la souplesse opérationnelle d'un drone lourd et l'efficience aérodynamique d'un transporteur long-courrier.
       </p>
     </div>
@@ -134,7 +138,7 @@
       
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ARCHITECTURE DU PROJET : LES 3 PILIERS DE CONCEPTION APPROFONDIS</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="leading-relaxed mb-6 text-justify-custom">
           Développé collectivement par l'équipe d'ingénierie (Matthys Badts, Jimmy Dieux, Zachary Fery, Christopher Jumel et Etienne Moyaux) dans le cadre de la Semaine Drone d'ELISA Aerospace, ce projet vise à répondre aux impératifs d'acheminement critique en milieu sanitaire hautement tendu.
         </p>
 
@@ -142,13 +146,13 @@
         <div class="border-l-4 border-cyan-500 pl-6 mb-12">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Cas d'Usage Médical & Sécurité du Fret</h3>
           <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Rôle : Réponse rapide aux greffes d'organes, transferts de sang et sérums biologiques</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed mb-3 text-justify-custom">
             <strong>Optimisation des délais :</strong> Conçu pour court-circuiter les embouteillages routiers et compléter les flottes d'hélicoptères classiques du SAMU, le LévyStation relie des zones distantes de plusieurs centaines de kilomètres en s'affranchissant des contraintes de pistes d'atterrissage conventionnelles.
           </p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed mb-3 text-justify-custom">
             <strong>Intégration logistique :</strong> Le volume interne total de 140 litres est réparti entre une soute principale avant et une soute arrière, incluant un compartiment réfrigéré pour les prélèvements thermosensibles.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed mb-6 text-justify-custom">
             <strong>Dispositifs de secours :</strong> Intégration d'un système de largage par parachute balistique d'urgence garantissant la préservation totale de la charge utile en cas de défaillance critique en vol.
           </p>
 
@@ -177,13 +181,13 @@
         <div class="border-l-4 border-amber-500 pl-6 mb-12">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Architecture de Propulsion Hybride & Redondance</h3>
           <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-3">Rôle : Couplage thermique et électrique pour une endurance maximale</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed mb-3 text-justify-custom">
             <strong>Groupe électrogène embarqué :</strong> Utilisation d'un moteur thermique haute performance fonctionnant comme générateur électrique (technologie similaire aux standards des sports mécaniques d'endurance), alimentant de manière continue les sous-systèmes.
           </p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed mb-3 text-justify-custom">
             <strong>Multirotors et propulsion de croisière :</strong> Le système répartit la puissance entre 6 petits rotors verticaux (assurant la portance pure lors des phases de décollage et d'atterrissage verticaux avec une redondance sécuritaire en cas de panne moteur) et deux moteurs principaux de croisière fixés sur l'empennage.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed mb-6 text-justify-custom">
             <strong>Bilan énergétique :</strong> Ce compromis hybride permet d'atteindre une vitesse de pointe de 300 km/h tout en conservant une autonomie de vol supérieure à 1 300 kilomètres.
           </p>
 
@@ -212,10 +216,10 @@
         <div class="border-l-4 border-emerald-500 pl-6">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Modélisation Numérique, CFD & Réglementation SORA</h3>
           <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-3">Rôle : Validation par éléments finis et conformité EASA</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed mb-3 text-justify-custom">
             <strong>Conception CAO et flux :</strong> Études structurales menées sous SolidWorks et simulations numériques CFD sous ANSYS FLUENT pour valider la transition aérodynamique délicate entre le vol vertical (stationnaire) et le vol horizontal propulsé.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed mb-6 text-justify-custom">
             <strong>Cadre réglementaire :</strong> Intégration rigoureuse des contraintes de certification de l'EASA et de la DGAC (analyse de risque SORA pour l'intégration des drones civils lourds dans l'espace aérien contrôlé), en synergie avec des acteurs de santé de référence (EFS, Agence de la Biomédecine).
           </p>
 
@@ -244,7 +248,7 @@
       <!-- Section : Bilan & Apports Stratégiques (SANS PHOTO) -->
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// BILAN & APPORTS STRATÉGIQUES</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="leading-relaxed mb-6 text-justify-custom">
           Ce projet collaboratif a permis de formaliser une démarche complète de bureau d'études, de l'expression initiale du besoin opérationnel jusqu'aux notes de dimensionnement global.
         </p>
 
@@ -297,7 +301,7 @@
           <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Motorisation Hybride</span>
           <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Réglementation EASA / SORA</span>
           <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Ingénierie Système</span>
-	  <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Bureau d'étude</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Bureau d'étude</span>
         </div>
       </div>
 

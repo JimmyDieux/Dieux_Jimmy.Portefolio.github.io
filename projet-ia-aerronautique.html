@@ -78,7 +78,7 @@
         <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">MACHINE LEARNING & PRÉDICTION</span>
       </div>
       <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Prédiction des Retards de Vol par Intelligence Artificielle</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify max-w-3xl">
         Conception, développement et optimisation comparative d'un pipeline complet de Machine Learning et de Deep Learning appliqué à la prédiction des retards de vol. Le projet analyse en profondeur les interactions complexes du trafic aérien domestique aux États-Unis à partir d'une base de données de référence (vols US 2013).
       </p>
     </div>
@@ -86,7 +86,7 @@
     <!-- Image Principale du Projet -->
     <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm mb-10">
       <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/39.png" alt="Vue d'ensemble et distribution des données du projet" class="w-full h-auto rounded-lg shadow-sm mb-3">
-        </div>
+    </div>
 
     <!-- Lien vers le Rapport PDF -->
     <div class="grid grid-cols-1 gap-4 mb-8">
@@ -129,7 +129,7 @@
       
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ARCHITECTURE MÉTHODOLOGIQUE & TECHNIQUE</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="leading-relaxed text-justify mb-6">
           Ce projet, réalisé par l'équipe collaborative composée de Jimmy Dieux, Flavie Mielcarek et Etienne Moyaux, s'articule rigoureusement autour de quatre grands axes techniques visant à transformer des données brutes hétérogènes en un outil décisionnel performant.
         </p>
 
@@ -137,13 +137,13 @@
         <div class="border-l-4 border-cyan-500 pl-6 mb-12">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Analyse Exploratoire, Nettoyage et choix des Caractéristiques (Feature Engineering)</h3>
           <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Traitement des anomalies, structuration des variables temporelles et encodage à haute cardinalité</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Traitement des données manquantes :</strong> Analyse statistique approfondie de la base de données brute pour identifier les valeurs aberrantes. Les vols comportant des anomalies critiques (annulations massives, déviations de trajectoire non documentées ou incohérences chronologiques entre départ et arrivée) ont été écartés afin de préserver la cohérence des estimateurs.
           </p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Création de variables dérivées (Feature Engineering) :</strong> Extraction de métadonnées temporelles à partir des timestamps bruts (jour de la semaine, mois, plages horaires de départ, cyclicité saisonnière) et calcul de la durée de vol théorique pour accentuer la sensibilité des algorithmes face aux retards cumulés.
           </p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Encodage et normalisation :</strong> Application d'un encodage One-Hot sur les variables catégorielles à forte cardinalité (telles que les identifiants des compagnies aériennes et les codes IATA des centaines d'aéroports d'origine et de destination). Standardisation minutieuse des variables continues pour harmoniser les échelles et optimiser la convergence numérique.
           </p>
         </div>
@@ -152,13 +152,13 @@
         <div class="border-l-4 border-amber-500 pl-6 mb-12">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Modélisation par Réseaux de Neurones Profonds (Deep Learning)</h3>
           <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-3">Conception itérative, architectures séquentielles et régularisation contre le surapprentissage</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Approche incrémentale des architectures :</strong> Développement progressif de modèles de réseaux de neurones multicouches (MLP). Initialisation avec une configuration simple (couche cachée de 64 neurones activés par fonction ReLU) pour établir une baseline de performance.
           </p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Approfondissement structural :</strong> Montée en puissance vers un réseau profond à 4 couches denses successives (128, 64, 32 et 16 neurones) pour capturer les non-linéarités complexes du trafic aérien.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed text-justify mb-6">
             <strong>Techniques de régularisation :</strong> Intégration de couches de Batch Normalization pour stabiliser la descente de gradient à chaque epoch, combinées à un taux de <i>dropout</i> fixé à 20% pour éliminer la co-adaptation des neurones et contrer efficacement l'overfitting. Malgré l'optimisation des hyperparamètres, cette approche neuronale s'est stabilisée à un RMSE de 38.42 minutes, révélant la complexité inhérente des structures tabulaires pour les architectures purement neuronales.
           </p>
 
@@ -173,13 +173,13 @@
         <div class="border-l-4 border-emerald-500 pl-6 mb-12">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Optimisation Avancée par Arbres de Décision Boostés (XGBoost)</h3>
           <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-3">Recherche aléatoire d'hyperparamètres et performance supérieure sur données tabulaires</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Justification du choix algorithmique :</strong> En raison de la nature tabulaire et clairsemée (sparse) des matrices de données de vol, basculement vers l'algorithme XGBoost (Extreme Gradient Boosting), reconnu pour sa robustesse face aux interactions non linéaires complexes.
           </p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Optimisation par RandomizedSearchCV :</strong> Exploration automatisée et stochastique de l'espace des hyperparamètres clés (profondeur maximale des arbres, taux d'apprentissage <i>learning_rate</i>, sous-échantillonnage des lignes et des colonnes) pour maximiser la capacité de généralisation du modèle.
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed text-justify mb-6">
             <strong>Analyse des performances obtenues :</strong> Le modèle XGBoost optimisé a nettement surperformé les réseaux de neurones, abaissant drastiquement le MSE à 27.44 et réduisant l'erreur quadratique moyenne à un RMSE minimal de 5.24 minutes, validant ainsi la pertinence de l'approche par boosting d'arbres pour ce cas d'usage aéronautique.
           </p>
 
@@ -200,10 +200,10 @@
         <div class="border-l-4 border-cyan-500 pl-6">
           <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">4. Ergonomie, Conception d'Interface et Prototypage Applicatif</h3>
           <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Traduction des modèles mathématiques en un outil interactif orienté utilisateur final</p>
-          <p class="leading-relaxed mb-3">
+          <p class="leading-relaxed text-justify mb-3">
             <strong>Contraintes opérationnelles et filtrage des entrées :</strong> Restriction volontaire des paramètres d'interaction aux seules informations accessibles en amont par un passager ou une compagnie avant le départ (compagnie aérienne, aéroports de départ et d'arrivée, horaires planifiés, date calendaire).
           </p>
-          <p class="leading-relaxed mb-6">
+          <p class="leading-relaxed text-justify mb-6">
             <strong>Prototypage d'interface interactive :</strong> Développement d'une surcouche logicielle sous forme de widgets ergonomiques permettant de simuler en temps réel le comportement prédictif d'un vol (par exemple, l'estimation automatisée d'un retard potentiel de 7.62 minutes sur une liaison transcontinentale majeure entre JFK et LAX opérée par American Airlines).
           </p>
 
@@ -218,24 +218,24 @@
       <!-- Section : Bilan & Apports Stratégiques -->
       <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// BILAN TECHNIQUE & PERSPECTIVES D'AMÉLIORATION</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="leading-relaxed text-justify mb-6">
           Ce projet a permis de valider l'ensemble du cycle de vie d'un projet d'intelligence artificielle appliqué au secteur aéronautique, depuis la structuration des bases de données jusqu'à l'évaluation comparative des modèles et la mise en forme ergonomique des résultats.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
             <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">🎯 Apports & Réalisations Clés</h3>
-            <ul class="space-y-3 text-sm">
+            <ul class="space-y-3 text-sm text-justify">
               <li class="flex items-start gap-2">
-                <span class="text-amber-500 font-bold">▸</span>
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
                 <span><strong>Maîtrise du pipeline de données :</strong> Traitement rigoureux et automatisation du nettoyage d'un dataset de vol massif.</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-amber-500 font-bold">▸</span>
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
                 <span><strong>Expertise comparative :</strong> Confrontation méthodique entre Deep Learning (Keras/TensorFlow) et Machine Learning tabulaire (XGBoost).</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-amber-500 font-bold">▸</span>
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
                 <span><strong>Valorisation logicielle :</strong> Création d'une interface de simulation épurée démontrant l'exploitabilité opérationnelle des scores.</span>
               </li>
             </ul>
@@ -243,17 +243,17 @@
 
           <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
             <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Pistes d'Évolution & Industrialisation</h3>
-            <ul class="space-y-3 text-sm">
+            <ul class="space-y-3 text-sm text-justify">
               <li class="flex items-start gap-2">
-                <span class="text-cyan-500 font-bold">▸</span>
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
                 <span><strong>Couplage météorologique en temps réel :</strong> Intégration de flux d'API météo pour injecter les conditions de vent et de visibilité en direct.</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-cyan-500 font-bold">▸</span>
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
                 <span><strong>Extension multi-annuelle :</strong> Élargissement de la base d'entraînement sur plusieurs années pour capter les tendances macro-économiques.</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-cyan-500 font-bold">▸</span>
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
                 <span><strong>Déploiement Cloud natif :</strong> Migration de l'architecture vers une application web conteneurisée (Docker) accessible en production.</span>
               </li>
             </ul>
