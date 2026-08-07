@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisa Sports Méca Presidency | Jimmy Dieux</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/90 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experience & Projects</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+          <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+          </svg>
+          <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Back Button Top -->
+    <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline mb-8">
+      ← Back to projects
+    </a>
+
+    <!-- Project Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-600 text-white text-xs font-mono px-3 py-1 rounded shadow">STUDENT ASSOCIATION PRESIDENCY</span>
+        <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">ELISA SPORTS MÉCA ASSOCIATION</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Restart, Management & Development: Elisa Sports Méca</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl text-justify">
+        Structural overhaul, strategic steering, and project management of mechanical and competitive projects for a motorsport-dedicated student association.
+      </p>
+    </div>
+
+    <!-- Main Image -->
+     <div class="relative rounded-xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-md mb-6 bg-slate-900/45 flex items-center justify-center">
+     <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/15.jpg" alt="Elisa Sports Meca" class="w-auto h-auto max-h-[500px] object-contain">
+     <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
+     </div>
+ </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Active Members</div>
+        <div class="text-lg font-bold text-red-500 font-mono">30 students</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Annual Budget</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">€10,000</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Technical Poles</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">4 structured poles</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Local Partners</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">5 partners (€3k)</div>
+      </div>
+    </div>
+
+    <!-- Main Section: Poles and Projects -->
+    <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ASSOCIATIVE STEERING & STRATEGY</h2>
+        <p class="leading-relaxed mb-6 text-justify">
+          The association's presidency centered on a comprehensive revival of the structure to turn it into a true incubator for applied technical projects, divided into rigorous management axes.
+        </p>
+
+        <!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Strategic & Operational Management</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Role: Organizational structuring and legal compliance</p>
+          <p class="leading-relaxed mb-4 text-justify">
+            <strong>Actions:</strong> Member recruitment and training (growth from 2 to 30 active members in 24 months), creation of internal processes (charter, roles, weekly meetings), and establishment of administrative and legal compliance (bylaws, SIREN number, prefecture and school filings).
+          </p>
+          <p class="leading-relaxed text-justify">
+            <strong>Impact:</strong> A sustainable structure equipped with clear governance, ready to carry out ambitious, large-scale mechanical projects.
+          </p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Financial Management & Sponsoring</h3>
+          <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-3">Role: Fundraising and resource allocation</p>
+          <p class="leading-relaxed mb-4 text-justify">
+            <strong>Actions:</strong> Management of a €10,000 annual budget, negotiation with 5 local partners securing a total funding of €3,000, and compilation/submission of public grant applications (City Hall, Region).
+          </p>
+          <p class="leading-relaxed text-justify">
+            <strong>Impact:</strong> Optimal resource allocation across 3 simultaneous projects (4L Trophy, Group N Rally, Karting) closing with a balanced budget and a reinvested surplus.
+          </p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Logistics & Workshops</h3>
+          <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-3">Role: Organization of workspaces and inventory</p>
+          <p class="leading-relaxed mb-4 text-justify">
+            <strong>Actions:</strong> Conducted a complete inventory of parts, consumables, and tools. Reorganization, storage optimization, and management of the association's stockroom.
+          </p>
+          <p class="leading-relaxed text-justify">
+            <strong>Impact:</strong> Renovation, practical layout, and compliance upgrade of workshop premises for a safe and functional working environment.
+          </p>
+        </div>
+
+        <!-- Detailed Technical Projects -->
+        <div class="mt-10 pt-8 border-t border-gray-200 dark:border-[#232a35]">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 font-mono text-cyan-700 dark:text-cyan-400">// DEEP DIVE INTO THE 3 TECHNICAL PROJECTS</h3>
+          
+          <div class="space-y-12">
+            
+            <!-- Project 1: 4L Trophy -->
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="bg-amber-600 text-white text-xs font-mono px-3 py-1 rounded">FLAGSHIP PROJECT 01</span>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white font-mono">4L Trophy Preparation & Restoration</h4>
+              </div>
+              <p class="text-sm leading-relaxed mb-6 text-justify">
+                Mechanical restoration and complete preparation to tackle demanding desert tracks. The project required in-depth literature research and targeted optimization of vehicle reliability.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-sm">
+                <div class="space-y-2">
+                  <p class="font-bold text-amber-600 dark:text-amber-400 font-mono text-xs">// TECHNICAL FOCUS AREAS:</p>
+                  <ul class="space-y-1.5 list-disc list-inside text-gray-600 dark:text-gray-300 text-justify">
+                    <li>Spare parts sourcing and study of manufacturer technical documentation.</li>
+                    <li>Complete overhaul and reliability enhancement of the wiring harness to withstand vibrations & external conditions.</li>
+                    <li>Major optimization of the cooling system against extreme heat.</li>
+                    <li>Design and installation of a custom interior layout (storage, safety, survival gear).</li>
+                  </ul>
+                </div>
+                <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] p-2 bg-slate-900/10 flex items-center justify-center">
+		<img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/12.jpg" alt="4L Trophy" class="w-auto h-auto max-h-52 object-contain">
+		</div>
+              </div>
+              <p class="text-xs font-mono text-gray-500 italic text-justify">Summary: Vehicle fully reliable and entry validated after 1.5 years of preparation work.</p>
+            </div>
+
+            <!-- Project 2: Citroën C2 VTS -->
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="bg-cyan-600 text-white text-xs font-mono px-3 py-1 rounded">FLAGSHIP PROJECT 02</span>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white font-mono">Citroën C2 VTS Rally</h4>
+              </div>
+              <p class="text-sm leading-relaxed mb-6 text-justify">
+                Transformation and preparation of a production vehicle in strict compliance with motorsport regulations (FFSA) to enter the association in rally and circuit events.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-sm">
+                <div class="space-y-2">
+                  <p class="font-bold text-cyan-600 dark:text-cyan-400 font-mono text-xs">// TECHNICAL FOCUS AREAS:</p>
+                  <ul class="space-y-1.5 list-disc list-inside text-gray-600 dark:text-gray-300 text-justify">
+                    <li>Installation of homologated roll cage, bucket seats, and FIA harnesses.</li>
+                    <li>Development of ground links (damper calibration and front geometry setup).</li>
+                    <li>Global optimization of the braking system (discs, racing pads, braided brake lines).</li>
+                    <li>Chassis weight reduction, complete engine/gearbox overhaul, and racing wiring harness adaptation.</li>
+                  </ul>
+                </div>
+                <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] h-52 bg-slate-900/10 flex items-center justify-center">
+                  <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/13.webp" alt="Citroën C2 VTS Rally" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <p class="text-xs font-mono text-gray-500 italic text-justify">Summary: A race-ready vehicle guaranteeing enhanced structural rigidity and dynamic performance.</p>
+            </div>
+
+            <!-- Project 3: Soapbox & Simracing -->
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-600 text-white text-xs font-mono px-3 py-1 rounded">FLAGSHIP PROJECT 03</span>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white font-mono">Soapbox Design</h4>
+              </div>
+              <p class="text-sm leading-relaxed mb-6 text-justify">
+                Combining pure mechanical engineering (CAD design and manufacturing) with virtual numerical simulation, this project highlights the association's versatility between physical workshop and virtual training.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-sm">
+                <div class="space-y-2">
+                  <p class="font-bold text-emerald-600 dark:text-emerald-400 font-mono text-xs">// TECHNICAL FOCUS AREAS:</p>
+                  <ul class="space-y-1.5 list-disc list-inside text-gray-600 dark:text-gray-300 text-justify">
+                    <li>CAD design and complete structural sizing (chassis, steering kinematics, braking).</li>
+                    <li>Manufacturing, cutting, welding operations, and structural assembly in compliance with race regulations.</li>
+                    <li>Execution of dynamic tests, tuning, and entry of the soapbox into local competition.</li>
+                  </ul>
+                </div>
+                <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] h-52 bg-slate-900/10 flex items-center justify-center">
+                  <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/14.png" alt="CAD Design and Workshop" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <p class="text-xs font-mono text-gray-500 italic text-justify">Summary: Successful participation in local races and creation of a seamless synergy between CAD modeling and track practice.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+<!-- SECTION: Partners & Sponsoring -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm mb-12">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// OFFICIAL PARTNERS & SUPPORTERS</h2>
+        <p class="leading-relaxed mb-6 text-justify">
+          We successfully united and secured support from renowned partners to accompany the development of our projects:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Partner 1 -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-lg text-center flex flex-col justify-between items-center group hover:border-cyan-500/50 transition-colors h-32">
+            <div class="w-full h-16 flex items-center justify-center overflow-hidden my-auto">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/2.jpg" alt="Sim'ONE Logo" class="max-h-full max-w-full object-contain filter dark:brightness-90">
+            </div>
+            <span class="font-mono text-xs text-gray-600 dark:text-gray-400 mt-2">Sim'ONE</span>
+          </div>
+          <!-- Partner 2 -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-lg text-center flex flex-col justify-between items-center group hover:border-cyan-500/50 transition-colors h-32">
+            <div class="w-full h-16 flex items-center justify-center overflow-hidden my-auto">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/11.webp" alt="TotalEnergies Logo" class="max-h-full max-w-full object-contain filter dark:brightness-90">
+            </div>
+            <span class="font-mono text-xs text-gray-600 dark:text-gray-400 mt-2">TotalEnergies</span>
+          </div>
+          <!-- Partner 3 -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-lg text-center flex flex-col justify-between items-center group hover:border-cyan-500/50 transition-colors h-32">
+            <div class="w-full h-16 flex items-center justify-center overflow-hidden my-auto">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/3.png" alt="RRS Logo" class="max-h-full max-w-full object-contain filter dark:brightness-90">
+            </div>
+            <span class="font-mono text-xs text-gray-600 dark:text-gray-400 mt-2">RRS</span>
+          </div>
+          <!-- Partner 4 -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-lg text-center flex flex-col justify-between items-center group hover:border-cyan-500/50 transition-colors h-32">
+            <div class="w-full h-16 flex items-center justify-center overflow-hidden my-auto">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/4.png" alt="Red Bull Logo" class="max-h-full max-w-full object-contain filter dark:brightness-90">
+            </div>
+            <span class="font-mono text-xs text-gray-600 dark:text-gray-400 mt-2">Red Bull</span>
+          </div>
+          <!-- Partner 5 -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-lg text-center flex flex-col justify-between items-center group hover:border-cyan-500/50 transition-colors h-32">
+            <div class="w-full h-16 flex items-center justify-center overflow-hidden my-auto">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/10.png" alt="Elisa Aerospace Logo" class="max-h-full max-w-full object-contain filter dark:brightness-90">
+            </div>
+            <span class="font-mono text-xs text-gray-600 dark:text-gray-400 mt-2">Elisa Aerospace</span>
+          </div>
+          <!-- Partner 6 -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-lg text-center flex flex-col justify-between items-center group hover:border-cyan-500/50 transition-colors h-32">
+            <div class="w-full h-16 flex items-center justify-center overflow-hidden my-auto">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/5.png" alt="Renault Logo" class="max-h-full max-w-full object-contain filter dark:brightness-90">
+            </div>
+            <span class="font-mono text-xs text-gray-600 dark:text-gray-400 mt-2">Renault</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: Assessment & Strategic Takeaways -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ASSESSMENT & STRATEGIC TAKEAWAYS</h2>
+        <p class="leading-relaxed mb-6 text-justify">
+          This presidency experience yielded concrete results and solidified essential managerial and technical skills.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Concrete Achievements -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">🎯 Concrete Achievements</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Association revived:</strong> 30 active members united and 3 technical projects successfully completed over 3 years.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Sound budget management:</strong> €1,500 surplus directly reinvested into equipment (tools, CAD).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Knowledge transmission:</strong> Training multiple students in welding, mechanical design, and CAD tools.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Takeaways & Future Vision -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Takeaways & Future Vision</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Leadership and cross-functional management:</strong> Ability to lead a multidisciplinary team and coordinate complex actions.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Entrepreneurial rigor:</strong> Mastery of financial management, partnership outreach, and institutional relations.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Sustainability and handover:</strong> Organization of recruitment, training, and support for the new board.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Skills -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// TECHNOLOGIES & ASSOCIATED SKILLS</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Project Management & Leadership</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Partnership Search & Sponsoring</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Automotive Preparation & Restoration</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">CAD Design & Sizing</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Welding & Mechanical Assembly</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Administrative & Legal Compliance</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back Button Bottom -->
+    <div class="pt-6 border-t border-gray-200 dark:border-[#232a35]">
+      <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline">
+        ← Back to projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Script Theme Toggle -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

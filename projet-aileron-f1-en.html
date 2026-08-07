@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Rear Wing CFD Study | Jimmy Dieux</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/95 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experience & Projects</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+          <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+          </svg>
+          <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Back Button Top -->
+    <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline mb-8">
+      ← Back to projects
+    </a>
+
+    <!-- Project Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span class="bg-cyan-600 text-white text-xs font-mono px-3 py-1 rounded shadow">CFD & AERODYNAMICS PROJECT // TSI RIGA</span>
+        <span class="text-gray-600 dark:text-gray-400 text-xs font-mono py-1">AIRFOIL STUDY</span>
+       </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Numerical & CFD Study of a F1 Rear Wing</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify max-w-4xl">
+        Detailed geometric design via surface modeling and in-depth CFD analysis of a Formula 1 rear wing inspired by the McLaren MCL38, simulating extreme aerodynamic conditions of the Monaco and Mexico circuits.
+      </p>
+    </div>
+
+    <!-- Main Project Image -->
+    <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm mb-10">
+      <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/44.jpg" alt="Figure 1: Overview of the SF-24 rear wing" class="w-full h-auto rounded-lg shadow-sm mb-3">
+      <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 1: Overview of the SF-24 rear wing.</div>
+    </div>
+
+      <!-- PDF Report Link -->
+    <div class="grid grid-cols-1 gap-4 mb-8">
+      <a href="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/Final_Research.pdf" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 p-5 rounded-xl shadow-sm transition-all duration-200 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-50 dark:bg-cyan-950/50 border border-cyan-200 dark:border-cyan-800/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 font-mono font-bold">
+            PDF
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Technical documentation & calculation notes</div>
+            <div class="text-base font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">View full project report (PDF)</div>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:translate-x-1 transition-transform font-mono">↗</span>
+      </a>
+    </div>
+
+    <!-- Detailed Key Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">CAD / CFD Software</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">SolidWorks 2023</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Numerical Mesh</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">~400,000 cells</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Max Speed (Mexico)</div>
+        <div class="text-lg font-bold text-amber-500 font-mono">362.5 km/h</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Max Downforce (Monaco)</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">1656 N</div>
+      </div>
+    </div>
+
+    <!-- Main Section: In-Depth Methodological Steps -->
+    <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// METHODOLOGICAL ARCHITECTURE & 3D DESIGN</h2>
+        <p class="leading-relaxed text-justify">
+          The engineering approach relied on a rigorous workflow ranging from parametric surface modeling under SolidWorks 2023 to finite volume numerical simulations via SolidWorks Flow Simulation.
+        </p>
+
+        <!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">1. FIA 2024 Regulatory Framework & Geometric Modeling</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Strict compliance with aerodynamic templates and integration of moving mechanisms</p>
+          <p class="leading-relaxed text-justify">
+            The wing architecture was entirely modeled in compliance with the limits imposed by the Formula 1 technical regulations (2024 season). Overall dimensions include a maximum width of 1230 mm and a total height of 600 mm.
+          </p>
+          <p class="leading-relaxed text-justify">
+            The assembly integrates the main plane, the endplate, the upper movable flap, and the Drag Reduction System (DRS) actuator allowing a calibrated opening of 8.5 cm as well as a maximum flap angle of 20° in high-downforce configuration.
+          </p>
+          
+          <!-- Image added for part 2 -->
+          <div class="mt-6 bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm flex flex-col items-center justify-center">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/45.png" alt="Figure 2: Mesh of the complete wing assembly" class="w-1/2 md:w-1/3 h-auto rounded-lg shadow-sm mb-3 object-contain">
+            <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 2: Mesh of the complete wing assembly.</div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">2. Physical Modeling & Fundamental CFD Equations</h3>
+          <p class="text-xs font-mono text-amber-600 dark:text-amber-400">Mathematical formalization of flow, lift, and drag</p>
+          <p class="leading-relaxed text-justify">
+            To characterize aerodynamic behavior, lift and drag forces were evaluated using fundamental fluid dynamics relations based on dynamic pressure, air density, flow velocity, as well as dimensionless coefficients Cl and Cd.
+          </p>
+          <p class="leading-relaxed text-justify">
+            The numerical solver implements Reynolds-Averaged Navier-Stokes (RANS) equations associated with two-equation turbulence models (k-epsilon and k-omega). These models capture velocity gradients, boundary layer separations along airfoil profiles, and tip vortex dissipation at the endplates with high fidelity.
+          </p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">3. Boundary Conditions & Operational Scenarios (Monaco vs. Mexico)</h3>
+          <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400">Comparative analysis against drastic variations in air density</p>
+          <p class="leading-relaxed text-justify">
+            The comparative study focused on two Grand Prix environments with radically opposite atmospheric characteristics:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-sm text-justify">
+            <li><strong>Monaco Grand Prix (Low speed, maximum downforce):</strong> Flow velocity set at 289.9 km/h (80.53 m/s), ambient temperature of 20.05°C, atmospheric pressure of 1005 hPa, and standard air density of 1.225 kg/m^3.</li>
+            <li><strong>Mexico Grand Prix (High speed, critical altitude):</strong> Simulated top speed at 362.5 km/h (99 m/s). Due to the high altitude of the circuit (approx. 2300 meters), air density drops significantly to 0.977 kg/m^3, directly impacting downforce efficiency.</li>
+          </ul>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="border-l-4 border-cyan-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">4. Numerical Results & Comparative Force Analysis</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Quantitative evaluation of aerodynamic performance gains</p>
+          <p class="leading-relaxed text-justify">
+            Analysis of results from SolidWorks Flow Simulation highlights the effectiveness of DRS open versus closed configurations:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-sm text-justify">
+            <li><strong>Monaco Configuration:</strong> Without DRS, the wing generates 1656 N of downforce for 796 N of drag. DRS activation reduces downforce to 1298 N and decreases drag to 514 N, lowering residual turbulence intensity at 10 meters to 3.69%.</li>
+            <li><strong>Mexico Configuration:</strong> Under the combined effect of increased speed (362.5 km/h) and low air density (0.977 kg/m^3), opening the DRS drops downforce from 2154 N to 1590 N and drag from 1018 N to 670 N, demonstrating crucial optimization of top speed on straights despite atmospheric thinning.</li>
+          </ul>
+
+          <!-- Images added for part 4 on 2 columns -->
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm flex flex-col items-center justify-between">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/46.png" alt="Downforce distribution in closed configuration" class="w-full h-auto rounded-lg shadow-sm mb-3 object-contain">
+              <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 3: Downforce distribution on the rear wing in closed configuration.</div>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm flex flex-col items-center justify-between">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/47.png" alt="Downforce distribution in open configuration" class="w-full h-auto rounded-lg shadow-sm mb-3 object-contain">
+              <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 4: Downforce distribution on the rear wing in open configuration.</div>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm flex flex-col items-center justify-between">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/48.png" alt="Drag modeling downstream of the wing" class="w-full h-auto rounded-lg shadow-sm mb-3 object-contain">
+              <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 5: Drag modeling downstream of the wing.</div>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm flex flex-col items-center justify-between">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/49.png" alt="Turbulence intensity downstream at 10m and 20m" class="w-full h-auto rounded-lg shadow-sm mb-3 object-contain">
+              <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 6: Turbulence intensity downstream of the wing at 10m and 20m.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section: Assessment & Strategic Contributions -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-6">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// TECHNICAL ASSESSMENT & FUTURE OUTLOOK</h2>
+        <p class="leading-relaxed text-justify">
+          This applied research project consolidated mastery of advanced numerical simulation tools and validated the critical impact of the DRS system on the lift-to-drag trade-off of Formula 1 single-seaters.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg space-y-3">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono text-amber-600 dark:text-amber-400">🎯 Key Skills & Contributions</h3>
+            <ul class="space-y-2 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Advanced CAD Mastery:</strong> Complex surface design of an F1 rear wing compliant with FIA 2024 requirements.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Rigorous CFD Analysis:</strong> Mesh setup (~400k cells) and interpretation of pressure and velocity fields.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Physical Correlation:</strong> Integration of real environmental parameters (density, altitude, temperature).</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg space-y-3">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono text-cyan-600 dark:text-cyan-400">🚀 Future Optimization Paths</h3>
+            <ul class="space-y-2 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>FSI Coupling (Fluid-Structure Interaction):</strong> Study of carbon flap elastic bending under extreme aerodynamic loads.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Parametric Sweep:</strong> Multi-objective optimization of intermediate attack angles to maximize efficiency in slow corners.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Global Chassis Integration:</strong> Simulation of rear wing wake interaction with the diffuser and beam wing.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Skills -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-4">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// TECHNOLOGIES & SKILLS MOBILIZED</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">SolidWorks (CAD)</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Flow Simulation (CFD)</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Computational Fluid Dynamics (RANS)</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Automotive Aerodynamics</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Systems Engineering & Regulatory Compliance</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Back Button -->
+    <div class="pt-6 border-t border-gray-200 dark:border-[#232a35]">
+      <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline">
+        ← Back to projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Script Theme Toggle -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

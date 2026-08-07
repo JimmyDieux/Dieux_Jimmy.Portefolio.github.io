@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATLAB/Simulink Study - Autonomous Drone Guidance | Jimmy Dieux</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/95 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experience & Projects</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+          <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+          </svg>
+          <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Back Button Top -->
+    <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline mb-8">
+      ← Back to projects
+    </a>
+
+    <!-- Project Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span class="bg-cyan-600 text-white text-xs font-mono px-3 py-1 rounded shadow">MATLAB / SIMULINK PROJECT // ELISA AEROSPACE</span>
+        <span class="text-gray-600 dark:text-gray-400 text-xs font-mono py-1">AUTONOMOUS SYSTEMS & GUIDANCE LAWS</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Guidance Laws & Multi-Target Observation for Autonomous Drones</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify max-w-4xl">
+        Theoretical study, MATLAB/Simulink modeling, and performance analysis of kinematic guidance laws (attraction, alignment, and circling) for the interception and sequential observation of multiple mobile ground targets by an unmanned aerial vehicle.
+      </p>
+    </div>
+
+    <!-- Main Project Image -->
+    <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm mb-10">
+      <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/50.jpg" alt="Figure 1: Overall drone trajectory in 2D multi-target mission" class="w-full h-auto rounded-lg shadow-sm mb-3">
+      <div class="text-center font-mono text-xs text-gray-500 dark:text-gray-400">Figure 1: Visualization of the drone trajectory during a multi-target interception mission (2D View).</div>
+    </div>
+
+    <!-- PDF Report Link -->
+    <div class="grid grid-cols-1 gap-4 mb-8">
+      <a href="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/Rapport_Projet_DieuxJimmy.pdf" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 p-5 rounded-xl shadow-sm transition-all duration-200 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-50 dark:bg-cyan-950/50 border border-cyan-200 dark:border-cyan-800/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 font-mono font-bold">
+            PDF
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Technical documentation & MATLAB calculation notes</div>
+            <div class="text-base font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Read the full project report (PDF)</div>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:translate-x-1 transition-transform font-mono">↗</span>
+      </a>
+    </div>
+
+    <!-- Detailed Key Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Environment</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">MATLAB / Simulink</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Drone Flight Altitude</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">50 meters</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Mobile Ground Targets</div>
+        <div class="text-lg font-bold text-amber-500 font-mono">3 Targets</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Switching Threshold</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">&lt; 10 meters</div>
+      </div>
+    </div>
+
+    <!-- Main Section: In-Depth Methodological Steps -->
+    <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// MISSION ARCHITECTURE & KINEMATIC MODELING</h2>
+        <p class="leading-relaxed text-justify">
+          The problem revolves around a pursuing drone initially positioned at [0, 0, 50] with an initial velocity of [10, 0, 0] m/s. The three ground targets move at a constant identical velocity equal to [1.5, 1.5, 0] m/s, while a fixed observer is stationed at [-200, -20, 100].
+        </p>
+
+        <!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">1. Study No. 1: Kinematic Guidance & Rendezvous Phase</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Use of a virtual target to satisfy the constant altitude constraint</p>
+          <p class="leading-relaxed text-justify">
+            To prevent any unwanted altitude variation toward targets located on the ground (z=0), a virtual target is projected onto the drone's flight plane at z = 50 m. The attraction vector is defined by the relative position between the drone and this virtual target.
+          </p>
+          <p class="leading-relaxed text-justify">
+            A sequencing logic integrated via a sequential switching block (Multiport Switch) allows the drone to switch instantly from one objective to the next as soon as the horizontal distance crosses the critical threshold of 10 meters.
+          </p>
+
+          <!-- Images associated Module 1 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/51.png" alt="Drone guidance law without noise or disturbance" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 2: Drone guidance law without noise or disturbance.</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/52.png" alt="Simulink area ensuring correct target selection" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 3: Simulink area ensuring correct target selection.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/53.png" alt="Drone - Current Target distance" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 4: Drone - Current Target distance over time.</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/54.png" alt="Normal Acceleration and Angles" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 5: Evolution of normal acceleration and angles.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">2. Guidance by Alignment on the Observer–Virtual Target Line</h3>
+          <p class="text-xs font-mono text-amber-600 dark:text-amber-400">Line-of-sight control and application of a damped second-order system</p>
+          <p class="leading-relaxed text-justify">
+            To break away from the disordered trajectories of simple attraction guidance, orthogonal alignment guidance is implemented. The dynamics of the error r(t) obey a canonical second-order form:
+          </p>
+          <p class="text-center font-mono my-2">r̈(t) + 2ξω<sub>n</sub>ṙ(t) + ω<sub>n</sub><sup>2</sup>r(t) = 0</p>
+          <p class="leading-relaxed mb-4 text-justify">
+            With a damping ratio fixed at ξ = 0.8 to prevent oscillations, and a natural frequency ωn related to the response time Tr, the corrective gains
+          </p>
+          <p class="text-center font-mono my-2">
+            k<sub>1</sub> = 2&xi;&omega;<sub>n</sub> = <sup>8</sup>&frasl;<sub>T<sub>r</sub></sub> &nbsp;&nbsp; and &nbsp;&nbsp; k<sub>2</sub> = &omega;<sub>n</sub><sup>2</sup> = <sup>16</sup>&frasl;<sub>&xi;<sup>2</sup> T<sub>r</sub><sup>2</sup></sub>
+          </p>
+          <p class="leading-relaxed mt-4 text-justify">
+            guarantee smooth convergence and an optimal line of sight for the fixed observer.
+          </p>
+
+          <!-- Images associated Module 2 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/55.png" alt="New navigation law integrating k1 and k2" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 6: New navigation law integrating k1 and k2.</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/56.png" alt="Trajectories for very large vs very small response time" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figures 7 & 8: Trajectories for very large and very small response times.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">3. Study No. 2: Circular Guidance for Target Observation</h3>
+          <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400">Combination of transit (alignment) and observation (circling) phases</p>
+          <p class="leading-relaxed text-justify">
+            When the drone enters the observation zone d < 100 m, the navigation law switches to circular guidance directly controlling the turn rate ψ from the deviation angle ξ relative to the line of sight:
+          </p>
+          <p class="text-center font-mono my-4">
+           &psi;&#775; = <sup>V<sup>2</sup></sup>&frasl;<sub>R<sub>ref</sub></sub> + <sup>K sin(&eta;)</sup>&frasl;<sub>V</sub>
+          </p>
+          <p class="leading-relaxed text-justify">
+            This theoretical formulation integrates a reference radius Rref and a corrective gain K (tested for K=0.2, K=1, and K=2) designed to ensure stable circling allowing 2 to 3 observation revolutions per target.
+          </p>
+
+          <!-- Images associated Module 3 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/57.png" alt="New circular navigation law" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 9: New circular navigation law.</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-[#0b0d10] p-3 rounded-lg border border-gray-200 dark:border-[#232a35]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/58.png" alt="Wiring for navigation law switching" class="w-full h-auto rounded">
+              <p class="text-xs font-mono text-center text-gray-500 mt-2">Figure 10: Wiring for navigation law switching.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="border-l-4 border-cyan-500 pl-6 space-y-3">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono">4. Critical Review & Improvement Avenues for the Simulink Model</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Comparative analysis and identification of practical limitations of the specifications</p>
+          <p class="leading-relaxed text-justify">
+            Although navigation law switches operate correctly in Simulink, confronting mission requirements highlights clear technical limitations:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-sm text-justify">
+            <li><strong>Lack of lap counting:</strong> The drone does not complete the 2 to 3 required revolutions around each target due to a lack of cumulative angle counting blocks integrated into the switching loop.</li>
+            <li><strong>Gain sensitivity:</strong> Variations in gain K do not significantly affect the simulated trajectory, revealing a need for dynamic adjustment in the implementation of the heading controller.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section: Assessment & Strategic Contributions -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-6">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// TECHNICAL ASSESSMENT & EVOLUTION PERSPECTIVES</h2>
+        <p class="leading-relaxed text-justify">
+          This academic project helped deepen the design of control laws for non-linear aerospace systems under a MATLAB/Simulink environment, validating the compromise between rendezvous simplicity and geometric observation quality.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg space-y-3">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono text-amber-600 dark:text-amber-400">🎯 Key Skills & Contributions</h3>
+            <ul class="space-y-2 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Simulink Modeling:</strong> Design of multi-level block diagrams, multiports switching management, and integrated MATLAB functions.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Advanced Control:</strong> Application of potential guidance laws, second-order alignment ($\xi$, $\omega$), and circling.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Trajectory Analysis:</strong> Critical study of stability, response time, and multi-observer lines of sight.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg space-y-3">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono text-cyan-600 dark:text-cyan-400">🚀 Future Optimization Avenues</h3>
+            <ul class="space-y-2 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Counting Logic:</strong> Integration of a cumulative angle counter $\psi$ to guarantee the required number of revolutions prior to switching.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Realistic Dynamic Models:</strong> Replacement of the purely kinematic approach with a full dynamic drone model (force/moment vector).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Noise Robustness:</strong> Addition of disturbances and measurement noise on position sensors to test guidance law resilience.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Skills -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm space-y-4">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white font-mono text-cyan-700 dark:text-cyan-400">// TECHNOLOGIES & MOBILIZED SKILLS</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">MATLAB/Simulink</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Flight Kinematics & Dynamics</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Second-Order Control Systems</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Guidance Laws & Observation</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back Button Bottom -->
+    <div class="pt-6 border-t border-gray-200 dark:border-[#232a35]">
+      <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline">
+        ← Back to projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Script Theme Toggle -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

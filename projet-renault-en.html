@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renault Group PFE | Thermal & Pneumatic Test Bench</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/90 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index-en.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experience & Projects</a>
+        <a href="contact-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <div class="flex items-center space-x-2">
+          <!-- Language Toggle Button -->
+          <button id="lang-toggle" type="button" onclick="window.location.href='projet-renault.html'" class="w-9 h-9 rounded-full overflow-hidden border border-gray-300 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 transition-all focus:outline-none flex items-center justify-center p-0.5 shadow-sm cursor-pointer" aria-label="Switch language">
+            <img id="lang-flag" src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/75.webp" alt="Français" class="w-full h-full object-cover rounded-full">
+          </button>
+
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+            <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+            </svg>
+            <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Top Back Button -->
+    <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline mb-8">
+      ← Back to projects
+    </a>
+
+    <!-- Project Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-600 text-white text-xs font-mono px-3 py-1 rounded shadow">RENAULT GROUP R&D OFFICE</span>
+        <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">MAR. 2026 - SEP. 2026</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Internship: Thermal & Pneumatic Test Bench Modernization</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify max-w-3xl">
+        Update, development, and optimization of a test bench centered around three key modules to monitor and test components using actuators under severe climatic conditions.
+      </p>
+    </div>
+
+    <!-- Main Image -->
+    <div class="relative h-[420px] rounded-xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-md mb-6">
+      <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/9.jpg" alt="Renault BE" class="w-full h-full object-cover">
+      <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
+        <p class="text-white font-mono text-sm">Figure 1: Overview of the test bench study environment.</p>
+      </div>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Relative Humidity</div>
+        <div class="text-lg font-bold text-red-500 font-mono">95%</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Ambient Temperature</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">-35°C to 65°C</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Target Actuator Temp</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">15°C to 30°C</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Actuator Force</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">Up to 100 N</div>
+      </div>
+    </div>
+
+    <!-- Main Section: The 3 Modules -->
+    <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// PROJECT ARCHITECTURE: THE 3 KEY MODULES</h2>
+        <p class="leading-relaxed text-justify mb-6">
+          To meet technical specifications and overcome environmental constraints of the test environment, the actuator control system is divided into three major complementary modules. Each fulfills a precise functional role in the testing and regulation chain.
+        </p>
+
+        <!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. The Thermal Module</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Role: Physical barrier and management of conductive-convective fluxes</p>
+          <p class="leading-relaxed text-justify mb-4">
+            <strong>Principle:</strong> This is the external physical barrier enclosing the actuator. Its geometric design and material selection are aimed at absorbing extreme external thermal aggressions (ranging from -35°C in cold conditions up to +65°C in warm environments).
+          </p>
+          <p class="leading-relaxed text-justify">
+            <strong>Utility:</strong> Without this protective barrier, the actuator would directly undergo thermal shocks from the external environment, immediately disrupting its mechanical properties, internal fluid viscosity, and stroke precision. This module creates a stable micro-climate around the component.
+          </p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. The Air Conditioning Module</h3>
+          <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-3">Role: Supply of an external air flow to regulate the thermal module's temperature</p>
+          <p class="leading-relaxed text-justify mb-4">
+            <strong>Principle:</strong> This subsystem integrates an air conditioner located outside the test bench capable of generating an airflow at a constant temperature. It supplies the heat or refrigeration energy required to counter heat losses or gains through the casing.
+          </p>
+          <p class="leading-relaxed text-justify">
+            <strong>Utility:</strong> The casing alone is not enough to block thermal transfers. It is imperative to inject a dynamic airflow to force the internal temperature to remain strictly within the safe target range (15°C to 30°C), thereby ensuring the actuator operates under nominal laboratory conditions regardless of the climatic conditions inside the test bench.
+          </p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. The Pneumatic & Regulation Module</h3>
+          <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-3">Role: Control of actuator speed and force</p>
+          <p class="leading-relaxed text-justify mb-4">
+            <strong>Principle:</strong> This module manages the pneumatic supply and closed-loop control of the actuator at the heart of the test bench. It relies on the computer system governing the entire test bench.
+          </p>
+          <p class="leading-relaxed text-justify">
+            <strong>Why it is present:</strong> It controls the dynamic response of the tested system. It is through this module that we control the actual speed of the actuator (calibrated between 0.01 and 0.1 m/s) and its capacity to develop a mechanical load force reaching up to 100 N.
+          </p>
+        </div>
+
+        <!-- Photo Gallery illustrating the modules -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-[#232a35]">
+          <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] bg-slate-900/5 dark:bg-[#0b0d10] p-3 flex flex-col items-center justify-between">
+            <div class="w-full h-40 flex items-center justify-center">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/1.jpg" alt="Enclosure Module" class="max-h-full max-w-full object-contain rounded">
+            </div>
+            <p class="text-xs font-mono text-gray-500 mt-3 text-center">Module 1: 3D view of insulating enclosure</p>
+          </div>
+          <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] bg-slate-900/5 dark:bg-[#0b0d10] p-3 flex flex-col items-center justify-between">
+            <div class="w-full h-40 flex items-center justify-center">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/7.png" alt="Aeraulic Module" class="max-h-full max-w-full object-contain rounded">
+            </div>
+            <p class="text-xs font-mono text-gray-500 mt-3 text-center">Module 2: Operating diagram</p>
+          </div>
+          <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] bg-slate-900/5 dark:bg-[#0b0d10] p-3 flex flex-col items-center justify-between">
+            <div class="w-full h-40 flex items-center justify-center">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/6.png" alt="Pneumatic Module" class="max-h-full max-w-full object-contain rounded">
+            </div>
+            <p class="text-xs font-mono text-gray-500 mt-3 text-center">Module 3: Matlab/Simulink control diagram</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- NEW SECTION: Assessment & Strategic Contributions -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ASSESSMENT & STRATEGIC CONTRIBUTIONS</h2>
+        <p class="leading-relaxed text-justify mb-6">
+          Beyond pure technical design, this final year project structured major industrial deliverables and consolidated advanced engineering skills directly transferable to my future endeavors.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Concrete Achievements -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">🎯 Concrete Achievements</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Critical test bench modernization:</strong> Reliability improvement of a test setup exposed to extreme environmental conditions (-35°C to +65°C, 95% humidity).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Complex control mastery:</strong> Successful synchronization between thermal, aeraulic, and pneumatic control to target a stable range (15°C to 30°C).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Operational validation:</strong> Capacity to test dynamic actuators under load (up to 100 N at 0.1 m/s) while isolating from external disturbances.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contributions & Future Vision -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Contributions & Future Vision</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Global system vision:</strong> Ability to grasp an industrial project from end to end, from CAD/multiphysics design to bench deployment.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Advanced multi-domain expertise:</strong> Strengthening of key skills in thermal engineering, fluid dynamics, pneumatics, and automation (MATLAB/Simulink).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Autonomous R&D engineer mindset:</strong> Aptitude to lead rigorous technical choices under strict specifications, a key asset for future R&D and design challenges.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Skills -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// ASSOCIATED TECHNOLOGIES & TOOLS</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Pneumatic Circuits</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Thermal & Aeraulics</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Control and Regulation</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Mechanical Design</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">MATLAB / Simulink</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">CATIA (3DX)</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Ansys Fluent</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Back Button -->
+    <div class="pt-6 border-t border-gray-200 dark:border-[#232a35]">
+      <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline">
+        ← Back to projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

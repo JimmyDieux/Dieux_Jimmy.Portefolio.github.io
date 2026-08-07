@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & CV | Jimmy Dieux - Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a', // Racing Red
+              cyan: '#00f0ff',   // Tech Blue
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased min-h-screen flex flex-col justify-between transition-colors duration-200">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white border-b border-gray-200 dark:bg-[#14181f] dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index-en.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-600 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Experiences & Projects</a>
+        <a href="contact-en.html" class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1">Contact</a>
+
+        <div class="flex items-center space-x-2">
+          <!-- Language Toggle -->
+          <button id="lang-toggle" type="button" class="w-9 h-9 rounded-full overflow-hidden border border-gray-300 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 transition-all focus:outline-none flex items-center justify-center p-0.5 shadow-sm" aria-label="Switch Language">
+            <img id="lang-flag" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" class="w-full h-full object-cover rounded-full">
+          </button>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-200 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle Theme">
+            <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+            </svg>
+            <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-28 pb-20 max-w-7xl mx-auto px-6 w-full flex-grow">
+    
+    <div class="max-w-4xl mx-auto">
+      <span class="text-xs font-mono text-cyan-600 dark:text-brand-cyan uppercase tracking-widest">// DIRECT COMMUNICATION CHANNEL</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">// CONTACT & INQUIRIES</h1>
+      <p class="text-gray-600 dark:text-gray-400 mb-12 text-lg">
+        Open to professional opportunities in Aeronautical, Space, Defense & Automotive engineering (Permanent contracts, R&D Projects, VIE).
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Contact Form -->
+        <div class="lg:col-span-7 bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl p-8 shadow-sm dark:shadow-xl">
+          <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2 font-mono">
+            <span class="text-brand-accent">&gt;</span> SEND A MESSAGE
+          </h2>
+
+          <form action="https://formsubmit.co/jimmy07072003@gmail.com" method="POST" class="space-y-5">
+            
+            <input type="hidden" name="_subject" value="New message from Portfolio - Jimmy Dieux">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+
+            <div>
+              <label class="block text-xs font-mono text-gray-500 dark:text-gray-400 mb-2 uppercase">Your Name / Company</label>
+              <input type="text" name="name" required placeholder="e.g. Airbus / Renault Group / Recruiter" class="w-full bg-slate-50 dark:bg-brand-bg border border-gray-300 dark:border-brand-border rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-cyan-500 dark:focus:border-brand-cyan transition font-mono text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-gray-500 dark:text-gray-400 mb-2 uppercase">Your Email</label>
+              <input type="email" name="email" required placeholder="name@company.com" class="w-full bg-slate-50 dark:bg-brand-bg border border-gray-300 dark:border-brand-border rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-cyan-500 dark:focus:border-brand-cyan transition font-mono text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-gray-500 dark:text-gray-400 mb-2 uppercase">Subject</label>
+              <input type="text" name="subject" required placeholder="e.g. Job Opportunity / Technical Discussion" class="w-full bg-slate-50 dark:bg-brand-bg border border-gray-300 dark:border-brand-border rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-cyan-500 dark:focus:border-brand-cyan transition font-mono text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-gray-500 dark:text-gray-400 mb-2 uppercase">Message</label>
+              <textarea name="message" rows="5" required placeholder="Detail your inquiry or opportunity..." class="w-full bg-slate-50 dark:bg-brand-bg border border-gray-300 dark:border-brand-border rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-cyan-500 dark:focus:border-brand-cyan transition font-mono text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-brand-accent hover:bg-red-700 text-white font-mono font-bold py-3.5 rounded-lg transition uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-red-900/20">
+              <span>[ SEND MESSAGE ]</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Downloads & LinkedIn -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl p-6 relative overflow-hidden group shadow-sm dark:shadow-none">
+            <span class="text-xs font-mono text-cyan-600 dark:text-brand-cyan uppercase block mb-1">// CURRICULUM VITAE</span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">FULL DOCUMENT (PDF)</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+              Download my CV summarizing my background at ELISA Aerospace, my internship at Renault Group, and my presidency of Elisa Sports Méca.
+            </p>
+            
+            <a href="Cv_dieuxjimmy_portefolio-en.pdf" download="Cv_dieuxjimmy_portefolio-en.pdf" class="inline-flex items-center justify-center gap-2 w-full bg-slate-50 dark:bg-brand-bg border border-cyan-600 dark:border-brand-cyan text-cyan-600 dark:text-brand-cyan hover:bg-cyan-600 hover:text-white dark:hover:bg-brand-cyan dark:hover:text-black font-mono font-bold py-3 px-4 rounded-lg transition">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              DOWNLOAD CV (.PDF)
+            </a>
+          </div>
+
+          <div class="bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl p-6 shadow-sm dark:shadow-none">
+            <span class="text-xs font-mono text-gray-500 dark:text-gray-400 uppercase block mb-1">// PROFESSIONAL NETWORK</span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">LINKEDIN</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+              Check out my full profile and let's connect.
+            </p>
+
+            <a href="https://www.linkedin.com/in/jimmy-dieux-740996230/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-[#0077b5] hover:bg-[#005885] text-white font-mono font-bold py-3 px-4 rounded-lg transition shadow-lg">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              VIEW LINKEDIN PROFILE ↗
+            </a>
+          </div>
+
+          <div class="bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl p-6 font-mono text-sm space-y-2 shadow-sm dark:shadow-none">
+            <div class="text-xs text-gray-500 uppercase">// DIRECT INFO</div>
+            <div class="text-gray-700 dark:text-gray-300"><span class="text-gray-400 dark:text-gray-500">Email:</span> j.dieux@elisa-aerospace.fr</div>
+            <div class="text-gray-700 dark:text-gray-300"><span class="text-gray-400 dark:text-gray-500">School:</span> ELISA Aerospace (2026)</div>
+            <div class="text-gray-700 dark:text-gray-300"><span class="text-gray-400 dark:text-gray-500">Mobility:</span> France & International (VIE)</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-gray-200 dark:border-brand-border py-6 text-center font-mono text-xs text-gray-500">
+    <p>© JIMMY DIEUX — AERONAUTICAL & AUTOMOTIVE ENGINEER</p>
+  </footer>
+
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
+        }
+      }
+
+      setDarkMode(isDark);
+
+      themeToggleBtn.addEventListener('click', function() {
+        const currentlyDark = document.documentElement.classList.contains('dark');
+        setDarkMode(!currentlyDark);
+        localStorage.setItem('color-theme', !currentlyDark ? 'dark' : 'light');
+      });
+
+      // Language Switcher (Back to French)
+      const langToggleBtn = document.getElementById('lang-toggle');
+      langToggleBtn.addEventListener('click', function() {
+        const currentPath = window.location.pathname;
+        let targetPath = 'contact.html';
+
+        if (currentPath.includes('Profil-en')) {
+          targetPath = 'Profil.html';
+        } else if (currentPath.includes('Projets-en')) {
+          targetPath = 'Projets.html';
+        } else if (currentPath.includes('contact-en')) {
+          targetPath = 'contact.html';
+        } else {
+          targetPath = 'index.html';
+        }
+
+        window.location.href = targetPath;
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Experience | Engineering Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Interface Navigation Bar -->
+  <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/90 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo / Identity -->
+      <a href="index-en.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <!-- Navigation Links & Toggles -->
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experiences & Projects</a>
+        <a href="contact-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <div class="flex items-center space-x-2">
+          <!-- Language Toggle Button -->
+          <button id="lang-toggle" type="button" onclick="window.location.href='Projets.html'" class="w-9 h-9 rounded-full overflow-hidden border border-gray-300 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 transition-all focus:outline-none flex items-center justify-center p-0.5 shadow-sm cursor-pointer" aria-label="Switch language">
+            <img id="lang-flag" src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/74.png" alt="Français" class="w-full h-full object-cover rounded-full">
+          </button>
+
+          <!-- Dark / Light Theme Button -->
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+            <!-- Sun Icon (visible in dark mode) -->
+            <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+            </svg>
+            <!-- Moon Icon (visible in light mode) -->
+            <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"><span class="text-cyan-700 dark:text-cyan-400 font-mono">//</span> TECHNICAL EXPERIENCES & PROJECTS</h1>
+    <p class="text-gray-700 dark:text-gray-400 max-w-2xl mb-12 text-justify">Explore my professional and association experience along with a selection of applied engineering projects in aerospace, space, and motorsport.</p>
+
+    <!-- SECTION 1: EXPERIENCES -->
+    <div class="mb-16">
+      <h2 class="text-2xl font-mono font-bold text-cyan-700 dark:text-cyan-400 mb-6 flex items-center gap-3">
+        <span>01.</span> EXPERIENCES
+        <span class="h-[1px] bg-gray-300 dark:bg-[#232a35] flex-1"></span>
+      </h2>
+
+      <div class="space-y-8">
+        <!-- EXPERIENCE 1: RENAULT GROUP -->
+        <a href="projet-renault-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/10 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/8.webp" alt="Renault Test Bench" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">INDUSTRY / R&D ENGINEERING OFFICE</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Renault Group — R&D Office Internship</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Mar. 2026 – Sept. 2026</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Managed the design of a thermal and pneumatic test module aimed at isolating an actuator from the extreme environments (from -35°C to +65°C) of a climatic chamber. The project includes sizing a climate subsystem to maintain the actuator's envelope within a target range of 15°C to 30°C. On the control side, multiphysics modeling under MATLAB/Simulink established speed-pressure-temperature correlation charts, implementing a PID control loop ensuring an actuation speed of 0.01 to 0.1 m/s for developed forces up to 100 N.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">CAD Design (CATIA)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">CFD (Fluent)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Control Systems (MATLAB/Simulink)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Specifications Drafting</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Role</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">Intern</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Domain</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">Automotive</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Project</div>
+                  <div class="text-base font-bold text-emerald-700 dark:text-green-400">Test Bench Modernization</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- EXPERIENCE 2: ELISA SPORTS MÉCA -->
+        <a href="projet-elisa-sports-meca-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/16.jpg" alt="Elisa Sports Meca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-cyan-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">MANAGEMENT / MOTORSPORT</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Elisa Sports Méca — Association President</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Dec. 2022 – Mar. 2026</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Global relaunch and strategic direction of a structure dedicated to applied engineering and motorsport. Managed a team of 30 members across 4 divisions, supervised a €10,000 budget, and steered three major technical projects: preparing a 4L for the 4L Trophy, bringing a Citroën C2 VTS Rally car up to FIA regulations, and designing/manufacturing a Soapbox racer.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Management & Structuring (30 members)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Sponsoring & Grants (€10k)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Motorsport</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">CAD Design & Mechanical Workshop</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Team Size</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">30 Active</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Total Budget</div>
+                  <div class="text-base font-bold text-cyan-600 dark:text-cyan-400">€10,000</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Key Projects</div>
+                  <div class="text-base font-bold text-amber-600 dark:text-amber-400">3</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>       
+
+        <!-- EXPERIENCE 3: HESPÉRUS MINI-ROCKET PROJECT -->
+        <a href="projet-fusee-hesperus-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/17.jpg" alt="Hesperus Mini-Rocket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">SPACE / DESIGN</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Hespérus Mini-Rocket — Project Manager</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Sept. 2021 – Jul. 2022</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Project management, design, and mechanical integration for the launch of a 1.45 kg experimental mini-rocket at C'space 2022. Led a team of 5 students: designed the airframe body and fins, modeled trajectories using OpenRocket, integrated the recovery compartment with a servo-controlled hatch, and deployed a secure dual-sequencer avionics system (Arduino Nano / Every) validating a nominal flight reaching an altitude of 318 meters.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Project Manager</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">OpenRocket & Simulation</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Mechanical Design & CAD</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Embedded Electronics (Arduino)</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Team</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">5 Students</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Domain</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">Space</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Result</div>
+                  <div class="text-base font-bold text-emerald-700 dark:text-green-400">Nominal Flight</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SECTION 2: PROJECTS -->
+    <div>
+      <h2 class="text-2xl font-mono font-bold text-cyan-700 dark:text-cyan-400 mb-6 flex items-center gap-3">
+        <span>02.</span> TECHNICAL PROJECTS
+        <span class="h-[1px] bg-gray-300 dark:bg-[#232a35] flex-1"></span>
+      </h2>
+
+      <div class="space-y-8">
+        <!-- PROJECT 1: COMBAT AIRCRAFT -->
+        <a href="projet-avion-combat-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/25.png" alt="Air Superiority Fighter Jet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-cyan-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">ENGINEERING OFFICE / DEFENSE</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Air Superiority Combat Aircraft</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Sept. 2025 - Jan. 2026</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Advanced multidisciplinary design of a twin-engine air superiority fighter configured with a Delta-Canard architecture. Full sizing under 3DEXPERIENCE of the wing, internal fuel tank arrangement, and systems routing, alongside strict management of the mass breakdown and center of gravity margins to validate aerodynamic performance and flight envelope.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">3D Design (3DEXPERIENCE)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Aerodynamics & Flight Dynamics</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Mass Breakdown & CG</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Systems Architecture</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Max Mass</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">20,413 kg</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Domain</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">Aeronautics</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Performance</div>
+                  <div class="text-base font-bold text-emerald-700 dark:text-green-400">Mach 1.1</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT: Guidance -->
+        <a href="projet-guidage-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] flex items-center justify-center bg-gray-50 dark:bg-[#0b0d10]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/50.jpg" alt="Global drone trajectory in 2D multi-target mission" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2">
+            <span class="absolute top-3 left-3 bg-cyan-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">MATLAB / SIMULINK</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Multi-Target Drone Guidance & Observation</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Nov. 2025</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Theoretical study, modeling under MATLAB/Simulink, and performance analysis of kinematic guidance laws (attraction, alignment, and circling) for intercepting and sequentially observing multiple mobile ground targets using an unmanned aerial vehicle, incorporating constant altitude constraints and second-order controllers.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">MATLAB / Simulink</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Flight Kinematics</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Control Systems</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Guidance Laws</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Environment</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">Simulink</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Mobile Targets</div>
+                  <div class="text-base font-bold text-amber-500">3 Targets</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Switching Threshold</div>
+                  <div class="text-base font-bold text-cyan-500">&lt; 10 meters</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT: MEDICAL VTOL DRONE (LévyStation) -->
+        <a href="projet-drone-vtol-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] flex items-center justify-center bg-gray-50 dark:bg-[#0b0d10]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/30.png" alt="LévyStation VTOL Drone" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2">
+            <span class="absolute top-3 left-3 bg-yellow-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">AERONAUTICS / ENGINEERING OFFICE</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">LévyStation – Hybrid Propulsion VTOL Drone</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Jun. 2025</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Comprehensive engineering study of an emergency transport aircraft with vertical takeoff and landing, combining the operational flexibility of a heavy drone with the efficiency of hybrid propulsion. SolidWorks modeling of 140 L medical holds and ANSYS Fluent CFD aerodynamic simulations to validate flight transition and EASA/SORA regulatory compliance.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">3D Design (SolidWorks)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Aerodynamics & CFD (ANSYS Fluent)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Hybrid Motorization & Systems</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">EASA & SORA Regulations</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Max Mass</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">750 kg</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Payload</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">80 kg (140 L)</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Range</div>
+                  <div class="text-base font-bold text-emerald-700 dark:text-green-400">1,340 km+</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 3: AI & AVIATION -->
+        <a href="projet-ia-aerronautique-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] flex items-center justify-center bg-gray-50 dark:bg-[#0b0d10]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/39.png" alt="Flight Delay Prediction by Artificial Intelligence" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2">
+            <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">ARTIFICIAL INTELLIGENCE / AVIATION</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Flight Delay Prediction via AI</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Dec. 2024</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Design, development, and comparative optimization of a complete Machine Learning and Deep Learning pipeline applied to flight delay prediction. The project deeply analyzes complex US domestic air traffic interactions using a benchmark dataset (US flights 2013), combining rigorous cleaning, feature engineering, and advanced predictive modeling.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Python</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">TensorFlow / Keras</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">XGBoost & Scikit-Learn</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Pandas & NumPy</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Feature Engineering</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Winning Algorithm</div>
+                  <div class="text-base font-bold text-emerald-500">Optimized XGBoost</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Minimal RMSE</div>
+                  <div class="text-base font-bold text-amber-500">5.24 min</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Optimal MSE</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">27.44</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT: F1 REAR WING CFD STUDY -->
+        <a href="projet-aileron-f1-en.html" class="block bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-xl hover:shadow-cyan-500/15 group">
+          <div class="lg:col-span-5 relative min-h-[250px] rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] flex items-center justify-center bg-gray-50 dark:bg-[#0b0d10]">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/45.png" alt="Complete wing assembly mesh - Figure 45" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2">
+            <span class="absolute top-3 left-3 bg-orange-600 text-white text-xs font-mono px-2.5 py-1 rounded shadow">MOTORSPORT / AERODYNAMICS</span>
+          </div>
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Numerical & CFD Study of an F1 Rear Wing</h3>
+                <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">Dec. 2024</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Detailed geometric design through surface modeling and in-depth CFD analysis of a Formula 1 rear wing inspired by the McLaren MCL38. Rigorous study integrating a digital mesh generation of ~400,000 cells using SolidWorks Flow Simulation, application of Navier-Stokes laws (RANS) with k-epsilon/k-omega turbulence models, and evaluation of aerodynamic performance under extreme atmospheric constraints of the Monaco and Mexican Grands Prix (managing high-altitude air rarefaction, DRS optimization, and tip vortex dissipation analysis).
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs mb-6">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">SolidWorks (CAD)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Flow Simulation (CFD)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Navier-Stokes (RANS)</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Aerodynamics & FIA 2024 Regulations</span>
+              </div>
+            </div>
+            <div>
+              <div class="border-t border-gray-200 dark:border-[#232a35] pt-4 grid grid-cols-3 gap-2 text-center font-mono mb-4">
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Digital Mesh</div>
+                  <div class="text-base font-bold text-gray-900 dark:text-white">~400k cells</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Max Speed (Mexico)</div>
+                  <div class="text-base font-bold text-amber-500">362.5 km/h</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-600 dark:text-gray-400">Max Downforce (Monaco)</div>
+                  <div class="text-base font-bold text-cyan-500">1656 N</div>
+                </div>
+              </div>
+              <div class="flex justify-end items-center text-cyan-700 dark:text-cyan-400 font-mono text-xs font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn more</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

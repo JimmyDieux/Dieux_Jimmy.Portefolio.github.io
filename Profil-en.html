@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile & Education | Engineering Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+<!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/95 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index-en.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-600 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index-en.html" class="text-cyan-600 dark:text-cyan-400 hover:text-gray-900 dark:hover:text-white transition-colors ">Home</a>
+        <a href="Profil-en.html" class="text-gray-600 dark:text-gray-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1">Profile</a>
+        <a href="Projets-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Experiences & Projects</a>
+        <a href="contact-en.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <div class="flex items-center space-x-2">
+          <!-- Language Toggle Button -->
+          <button id="lang-toggle" type="button" class="w-9 h-9 rounded-full overflow-hidden border border-gray-300 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 transition-all focus:outline-none flex items-center justify-center p-0.5 shadow-sm" aria-label="Switch language">
+            <img id="lang-flag" src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/74.png" alt="Français" class="w-full h-full object-cover rounded-full">
+          </button>
+
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+            <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+            </svg>
+            <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"><span class="text-cyan-700 dark:text-cyan-400 font-mono">//</span> PROFILE & ACADEMIC BACKGROUND</h1>
+    <p class="text-gray-700 dark:text-gray-400 max-w-2xl mb-12 text-justify">General overview, engineering specializations, and international background.</p>
+
+    <!-- Profile / Bio Section -->
+    <section class="mb-16 space-y-6">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-8 shadow-md dark:shadow-none">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-brand-accent">#</span> WHO I AM & WHERE I COME FROM
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Originally from the Oise region in France, I graduated from the ELISA Aerospace engineering school (located in Saint-Quentin). My academic journey also took me on a six-month international immersion at the Transport and Telecommunication Institute (TSI) in Riga, Latvia. I am completing my end-of-studies internship at the Renault Group Engineering Department on September 4, prior to my final internship defense on September 15. This experience allows me to combine rigorous industrial methodology with a strong background in complex technical projects.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-8 shadow-md dark:shadow-none">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-brand-accent">#</span> WHAT I DO & MY PASSIONS
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+          <strong>What I do:</strong> I combine solid expertise in numerical modeling, calculations, and simulation with extensive hands-on experience in industrial and student environments, mastering the entire development cycle from theoretical design to practical implementation.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          <strong>My passions:</strong> Passionate about aeronautics and aerospace in all their forms, I also have a strong interest in motorsport (Formula 1, endurance racing, historic vehicles) and simracing (Le Mans Ultimate). I am actively involved in hands-on vehicle preparation, welding, and restoration projects (4L Trophy, Citroën C2 VTS).
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-8 shadow-md dark:shadow-none">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-brand-accent">#</span> WHAT I AM LOOKING FOR & AVAILABILITY
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+          <strong>What I am looking for:</strong> I am seeking an engineering position within an Engineering Office (Bureau d'Études) focusing on Mechanical Engineering, Aeronautics/Aerospace, or RAMS / Safety Engineering.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          <strong>Availability:</strong> Soon to graduate, I am <span class="text-cyan-700 dark:text-cyan-400 font-bold">available starting September</span> to join exciting new projects.
+        </p>
+      </div>
+    </section>
+
+<!-- SECTION: TECHNICAL SKILLS & EXPERTISE -->
+<section class="mb-16">
+  <h2 class="text-2xl font-mono font-bold text-cyan-700 dark:text-cyan-400 mb-6 flex items-center gap-3">
+    <span>//</span> TECHNICAL SKILLS & EXPERTISE
+    <span class="h-[1px] bg-gray-300 dark:bg-[#232a35] flex-1"></span>
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    <!-- Skill 1 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/59.png" alt="CAD" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Design & CAD</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          3D modeling, assembly and subsystem design, management of complex geometric configurations using SolidWorks and CATIA.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 2 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/60.png" alt="Simulation" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Simulation & Analysis (CFD)</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Numerical studies, flow analysis, meshing, and optimization using Ansys Fluent.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 3 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/61.png" alt="Thermal" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Thermal & Energy Systems</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Sizing, modeling of heat transfer, fluid flow management, turbomachinery, and rocket engines.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 4 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/62.png" alt="Control Systems" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Control Systems & Automation</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Modeling, tuning, and control of multi-physical systems, regulation loops, and industrial actuators via MATLAB, Python, and C++.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 5 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/63.png" alt="Guidance" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Guidance, Navigation & Control (GNC)</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Study of autopilot laws, guidance laws, trajectories, and orientation mechanisms for mobile systems and launchers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 6 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/64.png" alt="Aerodynamics" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Aerodynamics & Fluid Mechanics</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Study of compressible flows, advanced fluid mechanics, and the aerodynamics of lifting wings and profiles.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 7 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/65.png" alt="Complex Systems" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Complex & Aerospace Systems</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Global engineering applied to complex systems: design, architecture, and integration for missiles, drones, helicopters, aircraft, and airships.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 8 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/66.png" alt="Materials" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Mechanics, Materials & FEA</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Mechanical sizing, study and behavior of composite materials, finite element analysis (FEA), and structural strength.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 9 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/67.png" alt="Prototyping" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">Prototyping & Testing</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Practical implementation, preparation, assembly, prototype tuning, and experimental validation on test benches or under real conditions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skill 10 -->
+    <div class="flex items-center gap-6">
+      <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-cyan-700 dark:border-cyan-400 shadow-lg">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/68.png" alt="RAMS" class="w-full h-full object-cover">
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] rounded-xl p-6 shadow-md flex-1">
+        <h3 class="font-mono text-cyan-700 dark:text-cyan-400 font-bold mb-2">RAMS & Safety Engineering</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Reliability analysis, failure rate calculations (MTBF, MTTR), mastery of FMEA (AMDEC), fault tree analysis, and risk assessment methodologies.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- SECTION: EDUCATION & INTERNATIONAL EXCHANGES -->
+    <div>
+      <h2 class="text-2xl font-mono font-bold text-cyan-700 dark:text-cyan-400 mb-6 flex items-center gap-3">
+        <span>//</span> EDUCATION & INTERNATIONAL EXCHANGES
+        <span class="h-[1px] bg-gray-300 dark:bg-[#232a35] flex-1"></span>
+      </h2>
+
+      <div class="space-y-8">
+        <!-- EDUCATION 1: ELISA AEROSPACE -->
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl p-6 transition-all duration-300 shadow-md">
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <!-- Image on the left -->
+            <div class="w-full md:w-56 h-36 rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] shrink-0 bg-gray-100 dark:bg-[#0b0d10]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/69.png" alt="ELISA Aerospace Campus" class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Text on the right -->
+            <div class="flex-1">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Master's Degree in Aeronautical & Space Engineering</h3>
+                  <p class="font-mono text-sm text-cyan-700 dark:text-cyan-400">ELISA Aerospace — <span class="text-gray-600 dark:text-gray-300 font-semibold">Saint-Quentin, France</span></p>
+                </div>
+                <span class="font-mono text-xs text-cyan-700 dark:text-cyan-400 font-medium bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded w-fit">Engineering Program</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 text-sm mb-4 leading-relaxed text-justify">
+                Highly specialized engineering curriculum focused on aeronautics and space. Acquisition of deep theoretical and practical skills through rigorous projects in aerodynamics, propulsion, flight dynamics, aerospace structures, and embedded systems architecture.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Structural Analysis & FEA</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Fluid Mechanics & CFD</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Propulsion, Space & Aeronautical Systems</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Flight Dynamics & Control</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">RAMS / Safety Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION 2: INTERNATIONAL EXCHANGE -->
+        <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-600/50 rounded-xl p-6 transition-all duration-300 shadow-md">
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <!-- Image on the left -->
+            <div class="w-full md:w-56 h-36 rounded-lg overflow-hidden border border-gray-200 dark:border-[#232a35] shrink-0 bg-gray-100 dark:bg-[#0b0d10]">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/70.png" alt="Riga Latvia TSI" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Text on the right -->
+            <div class="flex-1">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Bachelor in Mechanical Engineering and Aviation</h3>
+                  <p class="font-mono text-sm text-cyan-700 dark:text-cyan-400">Transport and Telecommunication Institute (TSI) — <span class="text-gray-600 dark:text-gray-300 font-semibold">Riga, Latvia</span></p>
+                </div>
+                <span class="font-mono text-xs text-cyan-700 dark:text-cyan-400 font-medium bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded w-fit">International Mobility</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed text-justify">
+                Six-month international academic exchange program at the TSI institute in Riga. Advanced coursework in transport engineering, advanced fluid dynamics, numerical modeling, and complex project management within a demanding English-speaking multicultural environment.
+              </p>
+              <div class="flex flex-wrap gap-2 font-mono text-xs">
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Fluid Dynamics</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Intelligent Transport Systems</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Quality & Safety Management</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">EASA Regulations</span>
+                <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3 py-1 rounded text-cyan-800 dark:text-cyan-400 font-medium">Artificial Intelligence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Theme & Language Management Script -->
+  <script>
+    (function() {
+      // Dark / Light Mode Management
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+
+      // Language Toggle Button (Redirects back to French version)
+      const langToggleBtn = document.getElementById('lang-toggle');
+      if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', function() {
+          const currentPath = window.location.pathname;
+          let targetPath = 'Profil.html';
+
+          if (currentPath.includes('Profil') || currentPath.includes('profil')) {
+            targetPath = 'Profil.html';
+          } else if (currentPath.includes('Projets') || currentPath.includes('projets')) {
+            targetPath = 'Projets.html';
+          } else if (currentPath.includes('contact')) {
+            targetPath = 'contact.html';
+          } else {
+            targetPath = 'index.html';
+          }
+
+          window.location.href = targetPath;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

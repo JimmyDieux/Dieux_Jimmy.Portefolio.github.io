@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Delay Prediction Project | Jimmy Dieux</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/90 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experience & Projects</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+          <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+          </svg>
+          <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Back Button Top -->
+    <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline mb-8">
+      ← Back to projects
+    </a>
+
+    <!-- Project Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-cyan-600 text-white text-xs font-mono px-3 py-1 rounded shadow">AI & AVIATION PROJECT // TSI RIGA</span>
+        <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">MACHINE LEARNING & PREDICTION</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Flight Delay Prediction Using Artificial Intelligence</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify max-w-3xl">
+        Design, development, and comparative optimization of a complete Machine Learning and Deep Learning pipeline applied to flight delay prediction. The project deeply analyzes complex domestic air traffic interactions in the United States using a benchmark database (US flights 2013).
+      </p>
+    </div>
+
+    <!-- Main Project Image -->
+    <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-4 rounded-xl shadow-sm mb-10">
+      <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/39.png" alt="Overview and data distribution of the project" class="w-full h-auto rounded-lg shadow-sm mb-3">
+    </div>
+
+    <!-- PDF Report Link -->
+    <div class="grid grid-cols-1 gap-4 mb-8">
+      <a href="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/AI_in_aviation_report.pdf" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 p-5 rounded-xl shadow-sm transition-all duration-200 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-50 dark:bg-cyan-950/50 border border-cyan-200 dark:border-cyan-800/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 font-mono font-bold">
+            PDF
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Technical documentation & calculation notes</div>
+            <div class="text-base font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Read the full AI in Aviation project report (PDF)</div>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:translate-x-1 transition-transform font-mono">↗</span>
+      </a>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Winning Algorithm</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">Optimized XGBoost</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Optimal MSE</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">27.44</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Minimal RMSE</div>
+        <div class="text-lg font-bold text-amber-500 font-mono">5.24 min</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Usability</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">Simple Interface</div>
+      </div>
+    </div>
+
+    <!-- Main Section: Project Steps -->
+    <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// METHODOLOGICAL & TECHNICAL ARCHITECTURE</h2>
+        <p class="leading-relaxed text-justify mb-6">
+          This project, carried out by the collaborative team of Jimmy Dieux, Flavie Mielcarek, and Etienne Moyaux, is rigorously structured around four major technical axes aimed at transforming heterogeneous raw data into a high-performance decision-making tool.
+        </p>
+
+        <!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 mb-12">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Exploratory Analysis, Data Cleaning, and Feature Engineering</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Anomaly handling, temporal variable structuring, and high-cardinality encoding</p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Missing data treatment:</strong> In-depth statistical analysis of the raw database to identify outliers. Flights with critical anomalies (mass cancellations, undocumented trajectory deviations, or chronological inconsistencies between departure and arrival) were discarded to preserve estimator consistency.
+          </p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Feature Engineering:</strong> Extraction of temporal metadata from raw timestamps (day of the week, month, departure time slots, seasonal cyclicity) and calculation of theoretical flight duration to enhance algorithm sensitivity to cumulative delays.
+          </p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Encoding and normalization:</strong> Application of One-Hot encoding on high-cardinality categorical variables (such as airline IDs and IATA codes for hundreds of origin and destination airports). Rigorous standardization of continuous variables to harmonize scales and optimize numerical convergence.
+          </p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 mb-12">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Deep Neural Network Modeling (Deep Learning)</h3>
+          <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-3">Iterative design, sequential architectures, and regularization against overfitting</p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Incremental architecture approach:</strong> Progressive development of multilayer perceptron (MLP) neural network models. Initialization with a simple configuration (hidden layer of 64 neurons activated by a ReLU function) to establish a performance baseline.
+          </p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Structural deepening:</strong> Scaling up to a deep network with 4 successive dense layers (128, 64, 32, and 16 neurons) to capture complex non-linearities in air traffic.
+          </p>
+          <p class="leading-relaxed text-justify mb-6">
+            <strong>Regularization techniques:</strong> Integration of Batch Normalization layers to stabilize gradient descent at each epoch, combined with a <i>dropout</i> rate set at 20% to eliminate neuron co-adaptation and effectively counter overfitting. Despite hyperparameter optimization, this neural approach stabilized at an RMSE of 38.42 minutes, revealing the inherent complexity of tabular structures for purely neural architectures.
+          </p>
+
+          <!-- Image: Figure 2 - Training History -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-xl p-4 shadow-sm max-w-lg mx-auto">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/40.png" alt="Training History - Mean error compared to real data" class="w-full h-auto rounded-lg shadow-sm mb-3">
+            <p class="text-xs font-mono text-gray-500 dark:text-gray-400 text-center">Figure 2: Training History – Loss evolution (Training vs Validation)</p>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6 mb-12">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Advanced Optimization via Boosted Decision Trees (XGBoost)</h3>
+          <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-3">Randomized hyperparameter search and superior performance on tabular data</p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Justification of algorithmic choice:</strong> Due to the tabular and sparse nature of flight data matrices, switching to the XGBoost (Extreme Gradient Boosting) algorithm, recognized for its robustness against complex non-linear interactions.
+          </p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Optimization via RandomizedSearchCV:</strong> Automated and stochastic exploration of key hyperparameter spaces (maximum tree depth, <i>learning_rate</i>, row and column subsampling) to maximize the model's generalization capacity.
+          </p>
+          <p class="leading-relaxed text-justify mb-6">
+            <strong>Performance analysis:</strong> The optimized XGBoost model clearly outperformed the neural networks, drastically lowering the MSE to 27.44 and reducing the root mean squared error to a minimal RMSE of 5.24 minutes, thus validating the relevance of the tree-boosting approach for this aeronautical use case.
+          </p>
+
+          <!-- Image Grid for XGBoost (Figure 3, Figure 4) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-xl p-4 shadow-sm flex flex-col justify-between">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/42.png" alt="Error normal repartition" class="w-full h-auto rounded-lg shadow-sm mb-3">
+              <p class="text-xs font-mono text-gray-500 dark:text-gray-400 text-center">Figure 3: Normal distribution of prediction errors.</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-xl p-4 shadow-sm flex flex-col justify-between">
+              <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/41.png" alt="Predicted delays compared to actual data" class="w-full h-auto rounded-lg shadow-sm mb-3">
+              <p class="text-xs font-mono text-gray-500 dark:text-gray-400 text-center">Figure 4: Direct comparison between actual delays and predictions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="border-l-4 border-cyan-500 pl-6">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">4. Ergonomics, Interface Design, and Application Prototyping</h3>
+          <p class="text-xs font-mono text-cyan-600 dark:text-cyan-400 mb-3">Translating mathematical models into an interactive, end-user-oriented tool</p>
+          <p class="leading-relaxed text-justify mb-3">
+            <strong>Operational constraints and input filtering:</strong> Voluntary restriction of interaction parameters to information accessible beforehand by a passenger or an airline prior to departure (airline, departure and arrival airports, scheduled times, calendar date).
+          </p>
+          <p class="leading-relaxed text-justify mb-6">
+            <strong>Interactive interface prototyping:</strong> Development of a software overlay in the form of ergonomic widgets to simulate in real-time the predictive behavior of a flight (for example, the automated estimation of a potential 7.62-minute delay on a major transcontinental route between JFK and LAX operated by American Airlines).
+          </p>
+
+          <!-- Interface Screenshot (Figure 5) -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-xl p-4 shadow-sm max-w-md mx-auto">
+            <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/43.png" alt="Flight simulation interface" class="w-full h-auto rounded-lg shadow-sm mb-3">
+            <p class="text-xs font-mono text-gray-500 dark:text-gray-400 text-center">Figure 5: Preview of the interactive test interface and predictive result.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Assessment & Strategic Contributions -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// TECHNICAL ASSESSMENT & IMPROVEMENT PERSPECTIVES</h2>
+        <p class="leading-relaxed text-justify mb-6">
+          This project successfully validated the entire lifecycle of an artificial intelligence project applied to the aeronautical sector, from database structuring to comparative model evaluation and ergonomic formatting of results.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">🎯 Key Contributions & Achievements</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Data pipeline mastery:</strong> Rigorous handling and automated cleaning of a massive flight dataset.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Comparative expertise:</strong> Methodical confrontation between Deep Learning (Keras/TensorFlow) and tabular Machine Learning (XGBoost).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold shrink-0">▸</span>
+                <span><strong>Software valorization:</strong> Creation of a streamlined simulation interface demonstrating the operational exploitability of scores.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Evolution & Industrialization Avenues</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Real-time meteorological coupling:</strong> Integration of weather API feeds to inject wind and visibility conditions live.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Multi-year extension:</strong> Broadening the training base over several years to capture macroeconomic trends.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold shrink-0">▸</span>
+                <span><strong>Cloud-native deployment:</strong> Migration of the architecture to a containerized web application (Docker) accessible in production.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Skills -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// TECHNOLOGIES & SKILLS MOBILIZED</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Python</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">TensorFlow / Keras</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">XGBoost & Scikit-Learn</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Pandas & NumPy</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Matplotlib & Seaborn</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Feature Engineering</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Artificial Intelligence</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back Button Bottom -->
+    <div class="pt-6 border-t border-gray-200 dark:border-[#232a35]">
+      <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline">
+        ← Back to projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

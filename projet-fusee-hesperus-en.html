@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hespérus Mini-Rocket Project | Jimmy Dieux</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0b0d10',
+              card: '#14181f',
+              border: '#232a35',
+              accent: '#ff2a2a',
+              cyan: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    .dark .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800 dark:bg-brand-bg dark:text-gray-200 font-sans bg-grid antialiased transition-colors duration-200">
+
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 dark:bg-[#14181f]/90 dark:border-[#232a35] sticky top-0 z-50 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm font-bold text-gray-900 dark:text-white tracking-wider hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors">
+        JIMMY DIEUX<span class="text-cyan-700 dark:text-cyan-400">.ENG</span>
+      </a>
+
+      <div class="flex items-center space-x-6 text-sm font-mono">
+        <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="Profil.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Profile</a>
+        <a href="Projets-en.html" class="text-cyan-700 dark:text-cyan-400 font-semibold border-b-2 border-cyan-700 dark:border-cyan-400 pb-1">Experience & Projects</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
+
+        <button id="theme-toggle" type="button" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1f2630] border border-gray-300 dark:border-[#232a35] transition-colors focus:outline-none" aria-label="Toggle theme">
+          <svg id="theme-toggle-sun-icon" class="hidden w-4 h-4 fill-current text-amber-400" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
+          </svg>
+          <svg id="theme-toggle-moon-icon" class="hidden w-4 h-4 fill-current text-slate-700" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Back Button -->
+    <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline mb-8">
+      ← Back to projects
+    </a>
+
+    <!-- Project Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-cyan-600 text-white text-xs font-mono px-3 py-1 rounded shadow">SPACE PROJECT // C'SPACE</span>
+        <span class="font-mono text-xs text-gray-600 dark:text-gray-400 font-medium">ELISA SPACE ASSOCIATION</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Hespérus Mini-Rocket (MF23)</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl text-justify">
+        Project management, mechanical design & integration for the launch of a 1.45 kg experimental mini-rocket reaching an altitude of 318 meters during C'Space 2022.
+      </p>
+    </div>
+
+  <!-- Main Image / Mission Logo -->
+    <div class="relative rounded-xl overflow-hidden border border-gray-200 dark:border-[#232a35] shadow-xl mb-6 bg-slate-900">
+      <div class="relative h-72 md:h-96 w-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-900 via-[#14181f] to-slate-950">
+        <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/17.jpg" alt="Hespérus mini-rocket on its launch pad" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-8">
+          <p class="text-cyan-400 font-mono text-xs uppercase tracking-widest mb-1">// Official C'Space 2022 Mission</p>
+          <p class="text-white font-mono text-sm md:text-base font-medium">Nominal flight validated on July 21, 2022 / Planète Sciences.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Links: Report & Video -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+      <!-- Report Link -->
+      <a href="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/Rapport_Hesperus.pdf" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-cyan-500 dark:hover:border-cyan-400 p-5 rounded-xl shadow-sm transition-all duration-200 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-50 dark:bg-cyan-950/50 border border-cyan-200 dark:border-cyan-800/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 font-mono font-bold">
+            PDF
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Technical Documentation</div>
+            <div class="text-base font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">View Mission Report</div>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:translate-x-1 transition-transform font-mono">↗</span>
+      </a>
+
+      <!-- YouTube Video Link -->
+      <a href="https://www.youtube.com/watch?v=UIXRzou2jLE" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] hover:border-red-500 dark:hover:border-red-400 p-5 rounded-xl shadow-sm transition-all duration-200 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-800/50 flex items-center justify-center text-red-600 dark:text-red-400 font-mono font-bold">
+            ▶
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 font-mono">Video Sequence</div>
+            <div class="text-base font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Watch Launch on YouTube</div>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:translate-x-1 transition-transform font-mono">↗</span>
+      </a>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Height / Mass</div>
+        <div class="text-lg font-bold text-red-500 font-mono">1010 mm / 1.45 kg</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Apogee Reached</div>
+        <div class="text-lg font-bold text-cyan-500 font-mono">318 meters</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Max Speed</div>
+        <div class="text-lg font-bold text-gray-900 dark:text-white font-mono">260 km/h (Mach 0.21)</div>
+      </div>
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-5 rounded-xl text-center shadow-sm">
+        <div class="text-xs text-gray-600 dark:text-gray-400 font-mono mb-1">Main Role</div>
+        <div class="text-lg font-bold text-emerald-500 font-mono">Project Lead & Mech</div>
+      </div>
+    </div>
+
+    <!-- Main Section: Architecture & Design -->
+    <div class="space-y-10 text-gray-700 dark:text-gray-300 mb-12">
+      
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6 font-mono text-cyan-700 dark:text-cyan-400">// ARCHITECTURE & MECHANICAL DESIGN</h2>
+        <p class="leading-relaxed mb-8 text-justify">
+          As Project Lead and responsible for the mechanical design of Hespérus, I directed a team of 5 undergraduate students to design, structure, and assemble all sub-systems within a year, strictly adhering to Planète Sciences specifications.
+        </p>
+
+<!-- Module 1 -->
+        <div class="border-l-4 border-cyan-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">1. Airframe & Aerodynamics</h3>
+          <p class="leading-relaxed mb-4 text-justify">
+            The external structure consists of a 60 mm outer diameter aluminum tube, 1.5 mm thick and 95 cm long, bringing the total length of the rocket to 1010 mm. This material was chosen for its exceptional structural rigidity against dynamic loads during propulsion and its lightweight properties.
+          </p>
+          <p class="leading-relaxed mb-6 text-justify">
+            The integration of the 4 fins required special attention: they are rigidly fixed to the body to ensure a stable center of pressure, located behind the center of gravity, maintaining a static margin compliant with flight safety requirements.
+          </p>
+          <!-- CAD Photos / Schematics -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-100 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-lg overflow-hidden shadow-sm p-3 flex flex-col justify-between">
+              <div class="flex items-center justify-center">
+                <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/18.png" alt="Global CAD view / OpenRocket Modeling" class="w-full h-auto max-h-64 object-contain rounded">
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-mono text-center mt-3 pt-2 border-t border-gray-200 dark:border-[#232a35]">Figure 1.1: Geometric and sectional modeling.</p>
+            </div>
+            <div class="bg-slate-100 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-lg overflow-hidden shadow-sm p-3 flex flex-col justify-between">
+              <div class="flex items-center justify-center">
+                <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/19.png" alt="Detail schematic of fins and empennage" class="w-full h-auto max-h-64 object-contain rounded">
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-mono text-center mt-3 pt-2 border-t border-gray-200 dark:border-[#232a35]">Figure 1.2: Mass balancing simulation on OpenRocket.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="border-l-4 border-amber-500 pl-6 mb-8">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">2. Internal Compartmentalization & Recovery</h3>
+          <p class="leading-relaxed mb-4 text-justify">
+            The internal architecture is subdivided into four distinct modular sections for easy integration and maintenance: the nose cone, the recovery compartment, the avionics bay, and the propulsion housing.
+          </p>
+          <p class="leading-relaxed mb-6 text-justify">
+            The recovery system consists of a 60 cm diameter nylon parachute, equipped with 8 suspension lines of 150 cm and a shroud ring. Ejection is triggered by opening a side hatch controlled by a servo-motor housed in the upper PLA nose cone, activated upon reaching apogee by the secure double-sequence firing system.
+          </p>
+          <!-- Photos Hatch / Parachute -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-100 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-lg overflow-hidden shadow-sm p-3 flex flex-col justify-between">
+              <div class="flex items-center justify-center">
+                <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/20.png" alt="Photo of the ejection hatch mechanism" class="w-full h-auto max-h-64 object-contain rounded">
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-mono text-center mt-3 pt-2 border-t border-gray-200 dark:border-[#232a35]">Figure 2.1: Internal structure of the upper compartment.</p>
+            </div>
+            <div class="bg-slate-100 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-lg overflow-hidden shadow-sm p-3 flex flex-col justify-between">
+              <div class="flex items-center justify-center">
+                <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/23.png" alt="View of folded parachute integration" class="w-full h-auto max-h-64 object-contain rounded">
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-mono text-center mt-3 pt-2 border-t border-gray-200 dark:border-[#232a35]">Figure 2.2: Parachute integration into its compartment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="border-l-4 border-emerald-500 pl-6">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2">3. Electronics & Double Sequencer</h3>
+          <p class="leading-relaxed mb-4 text-justify">
+            Flight management is based on a partitioned electronic architecture, separating the parachute board (Arduino Nano) from the board dedicated to onboard experiments (Arduino Every). Both entities communicate via a serial communication port, electrically isolated by optocouplers to prevent interference or voltage feedback.
+          </p>
+          <p class="leading-relaxed mb-6 text-justify">
+            Flight parameter acquisition is handled by a set of sensors including a barometer and an inertial measurement unit (MPU6050, BME280 sensor), measuring atmospheric pressure, temperature, and axial/transverse acceleration in real-time. Systems are activated by a pull-pin jack mechanism at the moment of launch from the pad.
+          </p>
+          <!-- Photos Electronics -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-100 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-lg overflow-hidden shadow-sm p-3 flex flex-col justify-between">
+              <div class="flex items-center justify-center">
+                <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/21.png" alt="Photo of the avionics bay and Arduino boards" class="w-full h-auto max-h-64 object-contain rounded">
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-mono text-center mt-3 pt-2 border-t border-gray-200 dark:border-[#232a35]">Figure 3.1: Wiring functional diagram and optocoupler isolation.</p>
+            </div>
+            <div class="bg-slate-100 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] rounded-lg overflow-hidden shadow-sm p-3 flex flex-col justify-between">
+              <div class="flex items-center justify-center">
+                <img src="https://raw.githubusercontent.com/JimmyDieux/Dieux_Jimmy.Portefolio.github.io/main/22.png" alt="Wiring and optocoupler schematic" class="w-full h-auto max-h-64 object-contain rounded">
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-mono text-center mt-3 pt-2 border-t border-gray-200 dark:border-[#232a35]">Figure 3.2: Motherboard schematic of the experiment module.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: Flight Report & Results -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// FLIGHT PROGRESS & EXPERIMENTAL RESULTS</h2>
+        <p class="leading-relaxed mb-6 text-justify">
+          Successfully launched on July 21, 2022, under optimal weather conditions (CAVOK, 5-knot wind, 31°C ground temperature), the mission concluded with a nominal flight validated by Planète Sciences management.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Flight Data -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-amber-600 dark:text-amber-400">📈 Recorded Flight Data</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Apogee:</strong> 318 meters above ground level (650 m absolute altitude).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Speeds:</strong> 100 km/h leaving the rail (28.4 m/s) and 260 km/h at max peak (72.1 m/s).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">▸</span>
+                <span><strong>Descent:</strong> Stabilized speed of 56 km/h (15.5 m/s) under 60 cm parachute. Landing with zero bounce.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Management & Skills -->
+          <div class="bg-slate-50 dark:bg-[#0b0d10] border border-gray-200 dark:border-[#232a35] p-6 rounded-lg">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white font-mono mb-3 text-cyan-600 dark:text-cyan-400">🚀 Management & Technical Balance</h3>
+            <ul class="space-y-3 text-sm text-justify">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Transverse management:</strong> Coordination of a 5-student team and interface management with Planète Sciences experts.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Systems engineering:</strong> Mastery of mass constraints, mechanical resistance, and aeronautical safety procedures.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-500 font-bold">▸</span>
+                <span><strong>Critical analysis:</strong> Constructive REX on abandoning airbrakes and GPS to optimize future association projects.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Skills -->
+      <div class="bg-white dark:bg-[#14181f] border border-gray-200 dark:border-[#232a35] p-8 rounded-xl shadow-sm">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono text-cyan-700 dark:text-cyan-400">// TECHNOLOGIES & SKILLS MOBILIZED</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-xs">
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Project Lead</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">OpenRocket & Simulation</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Mechanical Design & CAD</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Embedded Electronics (Arduino)</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Flight Data Acquisition</span>
+          <span class="bg-cyan-50 dark:bg-[#0b0d10] border border-cyan-200 dark:border-[#232a35] px-3.5 py-1.5 rounded text-cyan-800 dark:text-cyan-400 font-medium">Regulation (Planète Sciences)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Back Button -->
+    <div class="pt-6 border-t border-gray-200 dark:border-[#232a35]">
+      <a href="Projets-en.html" class="inline-flex items-center gap-2 font-mono text-sm text-cyan-700 dark:text-cyan-400 hover:underline">
+        ← Back to projects
+      </a>
+    </div>
+  </main>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-toggle-sun-icon');
+      const moonIcon = document.getElementById('theme-toggle-moon-icon');
+
+      const storedTheme = localStorage.getItem('color-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+      function setDarkMode(enable) {
+        if (enable) {
+          document.documentElement.classList.add('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+          }
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (sunIcon && moonIcon) {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+          }
+        }
+      }
+
+      setDarkMode(isDark);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          const currentlyDark = document.documentElement.classList.contains('dark');
+          const nextState = !currentlyDark;
+          setDarkMode(nextState);
+          localStorage.setItem('color-theme', nextState ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
